@@ -1,0 +1,111 @@
+{
+    "schema": "olm.bundle",
+    "name": "ocs-tls-profiles.v4.22.6-rhodf",
+    "package": "ocs-tls-profiles",
+    "image": "registry.redhat.io/odf4/ocs-tls-profiles-operator-bundle@sha256:c474116717c355222981668082be8cda238ddeed80d58068c3a900249d87e035",
+    "properties": [
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ocs.openshift.io",
+                "kind": "TLSProfile",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.maxOpenShiftVersion",
+            "value": "5.0"
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "ocs-tls-profiles",
+                "version": "4.22.6-rhodf"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[]",
+                    "capabilities": "Deep Insights",
+                    "createdAt": "2026-10-16T11:10:18Z",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "true",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "true",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "false",
+                    "features.operators.openshift.io/token-auth-azure": "false",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "olm.properties": "[{\"type\": \"olm.maxOpenShiftVersion\", \"value\": \"5.0\"}]",
+                    "olm.skipRange": ">=4.2.0 <4.22.6-rhodf",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Platform Plus\",\"OpenShift Data Foundation Essentials\",\"OpenShift Data Foundation Advanced\"]",
+                    "operators.operatorframework.io/builder": "operator-sdk-v1.42.2",
+                    "operators.operatorframework.io/operator-type": "non-standalone",
+                    "operators.operatorframework.io/project_layout": "go.kubebuilder.io/v4"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {
+                    "owned": [
+                        {
+                            "name": "tlsprofiles.ocs.openshift.io",
+                            "version": "v1",
+                            "kind": "TLSProfile",
+                            "displayName": "TLSProfile",
+                            "description": "TLSProfile is the Schema for the tlsprofiles API.\nIt allows administrators to configure TLS settings (protocol versions, ciphers, groups)\nin a centralized way."
+                        }
+                    ]
+                },
+                "description": "OCS TLS Profiles describe the TLS configuration info that should be applied to any of the subscribed server domains.",
+                "displayName": "OCS TLS Profiles",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": true
+                    }
+                ],
+                "keywords": [
+                    "tls"
+                ],
+                "links": [
+                    {
+                        "name": "Source Code",
+                        "url": "https://github.com/red-hat-storage/ocs-tls-profiles"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "Leela Venkaiah G",
+                        "email": "lgangava@redhat.com"
+                    }
+                ],
+                "maturity": "alpha",
+                "minKubeVersion": "1.20.0",
+                "provider": {
+                    "name": "Red Hat, LLC."
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "",
+            "image": "registry.redhat.io/odf4/ocs-tls-profiles-operator-bundle@sha256:c474116717c355222981668082be8cda238ddeed80d58068c3a900249d87e035"
+        }
+    ]
+}

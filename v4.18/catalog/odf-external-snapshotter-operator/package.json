@@ -1,0 +1,9 @@
+{
+    "schema": "olm.package",
+    "name": "odf-external-snapshotter-operator",
+    "defaultChannel": "stable-4.22",
+    "icon": {
+        "base64data": "",
+        "mediatype": ""
+    }
+}

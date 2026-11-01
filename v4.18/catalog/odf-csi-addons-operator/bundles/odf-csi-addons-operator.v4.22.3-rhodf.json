@@ -1,0 +1,286 @@
+{
+    "schema": "olm.bundle",
+    "name": "odf-csi-addons-operator.v4.22.3-rhodf",
+    "package": "odf-csi-addons-operator",
+    "image": "registry.redhat.io/odf4/odf-csi-addons-operator-bundle@sha256:ef492f88e657d9d5f4d6a7fac58729669eebada08fc16730e40f0ab5696502ec",
+    "properties": [
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csiaddons.openshift.io",
+                "kind": "CSIAddonsNode",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csiaddons.openshift.io",
+                "kind": "EncryptionKeyRotationCronJob",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csiaddons.openshift.io",
+                "kind": "EncryptionKeyRotationJob",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csiaddons.openshift.io",
+                "kind": "NetworkFence",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csiaddons.openshift.io",
+                "kind": "NetworkFenceClass",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csiaddons.openshift.io",
+                "kind": "ReclaimSpaceCronJob",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csiaddons.openshift.io",
+                "kind": "ReclaimSpaceJob",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "replication.storage.openshift.io",
+                "kind": "VolumeGroupReplication",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "replication.storage.openshift.io",
+                "kind": "VolumeGroupReplicationClass",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "replication.storage.openshift.io",
+                "kind": "VolumeGroupReplicationContent",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "replication.storage.openshift.io",
+                "kind": "VolumeReplication",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "replication.storage.openshift.io",
+                "kind": "VolumeReplicationClass",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.maxOpenShiftVersion",
+            "value": "5.0"
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "odf-csi-addons-operator",
+                "version": "4.22.3-rhodf"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[]",
+                    "capabilities": "Seamless Upgrades",
+                    "createdAt": "2026-08-31T09:50:33Z",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "true",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "true",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "false",
+                    "features.operators.openshift.io/token-auth-azure": "false",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "olm.properties": "[{\"type\": \"olm.maxOpenShiftVersion\", \"value\": \"5.0\"}]",
+                    "olm.skipRange": ">=4.2.0 <4.22.3-rhodf",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Platform Plus\",\"OpenShift Data Foundation Essentials\",\"OpenShift Data Foundation Advanced\"]",
+                    "operators.operatorframework.io/builder": "operator-sdk-unknown",
+                    "operators.operatorframework.io/operator-type": "non-standalone",
+                    "operators.operatorframework.io/project_layout": "go.kubebuilder.io/v4"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {
+                    "owned": [
+                        {
+                            "name": "csiaddonsnodes.csiaddons.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "CSIAddonsNode",
+                            "displayName": "CSIAddons Node",
+                            "description": "CSIAddonsNode is the Schema for the csiaddonsnode API"
+                        },
+                        {
+                            "name": "encryptionkeyrotationcronjobs.csiaddons.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "EncryptionKeyRotationCronJob",
+                            "displayName": "EncryptionKeyRotation CronJob",
+                            "description": "EncryptionKeyRotationCronJob is the Schema for the encryptionkeyrotationcronjobs API"
+                        },
+                        {
+                            "name": "encryptionkeyrotationjobs.csiaddons.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "EncryptionKeyRotationJob",
+                            "displayName": "EncryptionKeyRotation Job",
+                            "description": "EncryptionKeyRotationJob is the Schema for the encryptionkeyrotationjobs API"
+                        },
+                        {
+                            "name": "networkfenceclasses.csiaddons.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "NetworkFenceClass",
+                            "displayName": "Network Fence Class",
+                            "description": "NetworkFenceClass is the Schema for the networkfenceclasses API"
+                        },
+                        {
+                            "name": "networkfences.csiaddons.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "NetworkFence",
+                            "displayName": "Network Fence",
+                            "description": "NetworkFence is the Schema for the networkfences API"
+                        },
+                        {
+                            "name": "reclaimspacecronjobs.csiaddons.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "ReclaimSpaceCronJob",
+                            "displayName": "Reclaim Space CronJob",
+                            "description": "ReclaimSpaceCronJob is the Schema for the reclaimspacecronjobs API"
+                        },
+                        {
+                            "name": "reclaimspacejobs.csiaddons.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "ReclaimSpaceJob",
+                            "displayName": "Reclaim Space Job",
+                            "description": "ReclaimSpaceJob is the Schema for the reclaimspacejobs API"
+                        },
+                        {
+                            "name": "volumegroupreplicationclasses.replication.storage.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "VolumeGroupReplicationClass",
+                            "displayName": "Volume Group Replication Class",
+                            "description": "VolumeGroupReplicationClass is the Schema for the volumegroupreplicationclasses API"
+                        },
+                        {
+                            "name": "volumegroupreplicationcontents.replication.storage.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "VolumeGroupReplicationContent",
+                            "displayName": "Volume Group Replication Content",
+                            "description": "VolumeGroupReplicationContent is the Schema for the volumegroupreplicationcontents API"
+                        },
+                        {
+                            "name": "volumegroupreplications.replication.storage.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "VolumeGroupReplication"
+                        },
+                        {
+                            "name": "volumereplicationclasses.replication.storage.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "VolumeReplicationClass",
+                            "displayName": "Volume Replication Class",
+                            "description": "VolumeReplicationClass is the Schema for the volumereplicationclasses API"
+                        },
+                        {
+                            "name": "volumereplications.replication.storage.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "VolumeReplication",
+                            "displayName": "Volume Replication",
+                            "description": "VolumeReplication is the Schema for the volumereplications API"
+                        }
+                    ]
+                },
+                "description": "CSI Addons provides the CSI Addons Controller that enables advanced storage operations for CSI-drivers.",
+                "displayName": "CSI Addons",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": true
+                    }
+                ],
+                "keywords": [
+                    "storage",
+                    "csi"
+                ],
+                "links": [
+                    {
+                        "name": "CSI Addons",
+                        "url": "https://csi-addons.github.io"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "CSI Addons Community",
+                        "email": "csi-addons@redhat.com"
+                    }
+                ],
+                "maturity": "alpha",
+                "provider": {
+                    "name": "CSI Addons Community"
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "",
+            "image": "registry.redhat.io/odf4/odf-csi-addons-operator-bundle@sha256:ef492f88e657d9d5f4d6a7fac58729669eebada08fc16730e40f0ab5696502ec"
+        },
+        {
+            "name": "odf-csi-addons-operator",
+            "image": "registry.redhat.io/odf4/odf-csi-addons-rhel9-operator@sha256:550efb42e5c9e5d85e3b15a276bee052f0caf9ebff226a9e3c589c9433a4c469"
+        },
+        {
+            "name": "csi-addons-sidecar",
+            "image": "registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9@sha256:2ab9e35eccd9ae3135ae9c85c364a3ab2611cf0176d03ac358b2318ee213dc33"
+        },
+        {
+            "name": "rbac-proxy",
+            "image": "registry.redhat.io/openshift4/ose-kube-rbac-proxy-rhel9@sha256:768eb63513b08318e9c633094d60b1a0ecdedc93bfaf22592f4f9ac4e57eeacd"
+        }
+    ]
+}

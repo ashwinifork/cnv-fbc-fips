@@ -1,0 +1,192 @@
+{
+    "schema": "olm.bundle",
+    "name": "odr-cluster-operator.v4.22.6-rhodf",
+    "package": "odr-cluster-operator",
+    "image": "registry.redhat.io/odf4/odr-cluster-operator-bundle@sha256:5b39b897e19d49f4a910488a9809a8e9d98f466c5b9bc303d34de3b23953aea5",
+    "properties": [
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ramendr.openshift.io",
+                "kind": "DRClusterConfig",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ramendr.openshift.io",
+                "kind": "MaintenanceMode",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ramendr.openshift.io",
+                "kind": "ProtectedVolumeReplicationGroupList",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ramendr.openshift.io",
+                "kind": "ReplicationGroupDestination",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ramendr.openshift.io",
+                "kind": "ReplicationGroupSource",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ramendr.openshift.io",
+                "kind": "VolumeReplicationGroup",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.maxOpenShiftVersion",
+            "value": "5.0"
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "odr-cluster-operator",
+                "version": "4.22.6-rhodf"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[\n  {\n    \"apiVersion\": \"ramendr.openshift.io/v1alpha1\",\n    \"kind\": \"DRClusterConfig\",\n    \"metadata\": {\n      \"labels\": {\n        \"app.kubernetes.io/created-by\": \"ramen\",\n        \"app.kubernetes.io/instance\": \"drclusterconfig-sample\",\n        \"app.kubernetes.io/managed-by\": \"kustomize\",\n        \"app.kubernetes.io/name\": \"drclusterconfig\",\n        \"app.kubernetes.io/part-of\": \"ramen\"\n      },\n      \"name\": \"drclusterconfig-sample\"\n    },\n    \"spec\": null\n  },\n  {\n    \"apiVersion\": \"ramendr.openshift.io/v1alpha1\",\n    \"kind\": \"VolumeReplicationGroup\",\n    \"metadata\": {\n      \"name\": \"volumereplicationgroup-sample\"\n    },\n    \"spec\": {\n      \"async\": {\n        \"schedulingInterval\": \"10m\"\n      },\n      \"kubeObjectProtection\": {\n        \"captureInterval\": \"1m\",\n        \"captureOrder\": [\n          {\n            \"includedResources\": [\n              \"ConfigMap\",\n              \"Secret\"\n            ],\n            \"name\": \"config\"\n          },\n          {\n            \"includedResources\": [\n              \"sample1.cpd.ibm.com\",\n              \"sample2.cpd.ibm.com\",\n              \"sample3.cpd.ibm.com\"\n            ],\n            \"name\": \"cpd\"\n          },\n          {\n            \"includedResources\": [\n              \"Deployment\"\n            ],\n            \"name\": \"deployments\"\n          },\n          {\n            \"excludedResources\": [\n              \"\"\n            ],\n            \"includeClusterResources\": true,\n            \"name\": \"everything\"\n          }\n        ],\n        \"recoverOrder\": [\n          {\n            \"backupName\": \"config\",\n            \"includeClusterResources\": true,\n            \"includedResources\": [\n              \"ConfigMap\",\n              \"Secret\"\n            ]\n          },\n          {\n            \"backupName\": \"cpd\",\n            \"includedResources\": [\n              \"sample1.cpd.ibm.com\",\n              \"sample2.cpd.ibm.com\",\n              \"sample3.cpd.ibm.com\"\n            ]\n          },\n          {\n            \"backupName\": \"deployments\",\n            \"includedResources\": [\n              \"Deployment\"\n            ]\n          },\n          {\n            \"backupName\": \"everything\",\n            \"excludedResources\": [\n              \"ConfigMap\",\n              \"Secret\",\n              \"Deployment\",\n              \"sample1.cpd.ibm.com\",\n              \"sample2.cpd.ibm.com\",\n              \"sample3.cpd.ibm.com\"\n            ]\n          }\n        ]\n      },\n      \"pvcSelector\": {\n        \"matchLabels\": {\n          \"any-pvc-label\": \"value\"\n        }\n      },\n      \"replicationState\": \"primary\",\n      \"s3Profiles\": [\n        \"s3-profile-of-east\",\n        \"s3-profile-of-west\"\n      ]\n    }\n  }\n]",
+                    "capabilities": "Seamless Upgrades",
+                    "createdAt": "2026-10-16T11:15:25Z",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "true",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "true",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "false",
+                    "features.operators.openshift.io/token-auth-azure": "false",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "olm.properties": "[{\"type\": \"olm.maxOpenShiftVersion\", \"value\": \"5.0\"}]",
+                    "olm.skipRange": ">=4.2.0 <4.22.6-rhodf",
+                    "operatorframework.io/suggested-namespace": "openshift-dr-system",
+                    "operators.openshift.io/infrastructure-features": "[\"disconnected\"]",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Platform Plus\",\"OpenShift Data Foundation Essentials\",\"OpenShift Data Foundation Advanced\"]",
+                    "operators.operatorframework.io/builder": "operator-sdk-v1.41.1",
+                    "operators.operatorframework.io/project_layout": "go.kubebuilder.io/v4"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {
+                    "owned": [
+                        {
+                            "name": "drclusterconfigs.ramendr.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "DRClusterConfig"
+                        },
+                        {
+                            "name": "maintenancemodes.ramendr.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "MaintenanceMode"
+                        },
+                        {
+                            "name": "protectedvolumereplicationgrouplists.ramendr.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "ProtectedVolumeReplicationGroupList"
+                        },
+                        {
+                            "name": "replicationgroupdestinations.ramendr.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "ReplicationGroupDestination"
+                        },
+                        {
+                            "name": "replicationgroupsources.ramendr.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "ReplicationGroupSource"
+                        },
+                        {
+                            "name": "volumereplicationgroups.ramendr.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "VolumeReplicationGroup",
+                            "displayName": "Volume Replication Group",
+                            "description": "VolumeReplicationGroup is the Schema for the volumereplicationgroups API"
+                        }
+                    ]
+                },
+                "description": "OpenShift DR Cluster is a disaster-recovery orchestrator for stateful applications, that operates from an Advanced Cluster Management (ACM) managed cluster and is controlled by Openshift DR Hub operator to orchestrate the life-cycle of an application, and its state on the managed cluster.",
+                "displayName": "Openshift DR Cluster Operator",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": true
+                    }
+                ],
+                "keywords": [
+                    "Storage",
+                    "Integration & Delivery",
+                    "OpenShift Optional"
+                ],
+                "labels": {
+                    "full_version": "4.22.6-1",
+                    "operatorframework.io/arch.amd64": "supported",
+                    "operatorframework.io/arch.ppc64le": "supported",
+                    "operatorframework.io/arch.s390x": "supported"
+                },
+                "links": [
+                    {
+                        "name": "Source Code",
+                        "url": "https://github.com/red-hat-storage/ramen"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "Red Hat Support",
+                        "email": "ocs-support@redhat.com"
+                    }
+                ],
+                "maturity": "alpha",
+                "provider": {
+                    "name": "Red Hat, Inc."
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "",
+            "image": "registry.redhat.io/odf4/odr-cluster-operator-bundle@sha256:5b39b897e19d49f4a910488a9809a8e9d98f466c5b9bc303d34de3b23953aea5"
+        },
+        {
+            "name": "odr-operator",
+            "image": "registry.redhat.io/odf4/odr-rhel9-operator@sha256:22f55c1162dfea43a8ff0e6fc5393d435b2d7eeacc2655da1cf4cb3bcaaa3cfd"
+        },
+        {
+            "name": "rbac-proxy",
+            "image": "registry.redhat.io/openshift4/ose-kube-rbac-proxy-rhel9@sha256:746780334b4c4783725909cc3f6dfa883620f8ad6c5f0752b8d6388a3d47cbe5"
+        }
+    ]
+}

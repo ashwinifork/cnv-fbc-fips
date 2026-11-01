@@ -1,0 +1,234 @@
+{
+    "schema": "olm.bundle",
+    "name": "cephcsi-operator.v4.22.2-rhodf",
+    "package": "cephcsi-operator",
+    "image": "registry.redhat.io/odf4/cephcsi-operator-bundle@sha256:10dd80b3ad82c20eef3c275ae4e60e096e70da1d1caf2617c343ee87796216c3",
+    "properties": [
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csi.ceph.io",
+                "kind": "CephConnection",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csi.ceph.io",
+                "kind": "CephConnection",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csi.ceph.io",
+                "kind": "ClientProfile",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csi.ceph.io",
+                "kind": "ClientProfile",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csi.ceph.io",
+                "kind": "ClientProfileMapping",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csi.ceph.io",
+                "kind": "ClientProfileMapping",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csi.ceph.io",
+                "kind": "Driver",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csi.ceph.io",
+                "kind": "Driver",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csi.ceph.io",
+                "kind": "OperatorConfig",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "csi.ceph.io",
+                "kind": "OperatorConfig",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.maxOpenShiftVersion",
+            "value": "5.0"
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "cephcsi-operator",
+                "version": "4.22.2-rhodf"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[]",
+                    "capabilities": "Deep Insights",
+                    "createdAt": "2026-08-18T14:52:08Z",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "true",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "true",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "false",
+                    "features.operators.openshift.io/token-auth-azure": "false",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "olm.properties": "[{\"type\": \"olm.maxOpenShiftVersion\", \"value\": \"5.0\"}]",
+                    "olm.skipRange": ">=4.2.0 <4.22.2-rhodf",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Platform Plus\",\"OpenShift Data Foundation Essentials\",\"OpenShift Data Foundation Advanced\"]",
+                    "operators.operatorframework.io/builder": "operator-sdk-v1.34.1",
+                    "operators.operatorframework.io/operator-type": "non-standalone",
+                    "operators.operatorframework.io/project_layout": "go.kubebuilder.io/v4"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {
+                    "owned": [
+                        {
+                            "name": "cephconnections.csi.ceph.io",
+                            "version": "v1",
+                            "kind": "CephConnection"
+                        },
+                        {
+                            "name": "cephconnections.csi.ceph.io",
+                            "version": "v1alpha1",
+                            "kind": "CephConnection"
+                        },
+                        {
+                            "name": "clientprofilemappings.csi.ceph.io",
+                            "version": "v1",
+                            "kind": "ClientProfileMapping"
+                        },
+                        {
+                            "name": "clientprofilemappings.csi.ceph.io",
+                            "version": "v1alpha1",
+                            "kind": "ClientProfileMapping"
+                        },
+                        {
+                            "name": "clientprofiles.csi.ceph.io",
+                            "version": "v1",
+                            "kind": "ClientProfile"
+                        },
+                        {
+                            "name": "clientprofiles.csi.ceph.io",
+                            "version": "v1alpha1",
+                            "kind": "ClientProfile"
+                        },
+                        {
+                            "name": "drivers.csi.ceph.io",
+                            "version": "v1",
+                            "kind": "Driver"
+                        },
+                        {
+                            "name": "drivers.csi.ceph.io",
+                            "version": "v1alpha1",
+                            "kind": "Driver"
+                        },
+                        {
+                            "name": "operatorconfigs.csi.ceph.io",
+                            "version": "v1",
+                            "kind": "OperatorConfig"
+                        },
+                        {
+                            "name": "operatorconfigs.csi.ceph.io",
+                            "version": "v1alpha1",
+                            "kind": "OperatorConfig"
+                        }
+                    ]
+                },
+                "description": "Operator to deploy ceph csi drivers.",
+                "displayName": "CephCSI operator",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": true
+                    }
+                ],
+                "keywords": [
+                    "storage",
+                    "csi"
+                ],
+                "links": [
+                    {
+                        "name": "Github Repo",
+                        "url": "https://github.com/ceph/ceph-csi-operator"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "CephCSI Community",
+                        "email": "ceph-csi-team@redhat.com"
+                    }
+                ],
+                "maturity": "alpha",
+                "provider": {
+                    "name": "CephCSI Community"
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "",
+            "image": "registry.redhat.io/odf4/cephcsi-operator-bundle@sha256:10dd80b3ad82c20eef3c275ae4e60e096e70da1d1caf2617c343ee87796216c3"
+        },
+        {
+            "name": "cephcsi-operator",
+            "image": "registry.redhat.io/odf4/cephcsi-rhel9-operator@sha256:2bf8c0dfa9ca27df5f12372d120a3bcb40b6fa3690731c8eb3bd9c08f1b99046"
+        },
+        {
+            "name": "kube-rbac-proxy",
+            "image": "registry.redhat.io/openshift4/ose-kube-rbac-proxy-rhel9@sha256:c6df77b920ab428291b032a6ade3fd3437e781285743df08eadf9c539b64ba34"
+        }
+    ]
+}

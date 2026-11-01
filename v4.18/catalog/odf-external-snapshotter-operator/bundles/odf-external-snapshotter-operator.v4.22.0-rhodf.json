@@ -1,0 +1,134 @@
+{
+    "schema": "olm.bundle",
+    "name": "odf-external-snapshotter-operator.v4.22.0-rhodf",
+    "package": "odf-external-snapshotter-operator",
+    "image": "registry.redhat.io/odf4/odf-external-snapshotter-operator-bundle@sha256:38ec66fa27620c469aacd760768f28242de1969814d2b952c6fd2bbc57ff2f04",
+    "properties": [
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "groupsnapshot.storage.openshift.io",
+                "kind": "VolumeGroupSnapshot",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "groupsnapshot.storage.openshift.io",
+                "kind": "VolumeGroupSnapshotClass",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "groupsnapshot.storage.openshift.io",
+                "kind": "VolumeGroupSnapshotContent",
+                "version": "v1beta1"
+            }
+        },
+        {
+            "type": "olm.maxOpenShiftVersion",
+            "value": "4.23"
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "odf-external-snapshotter-operator",
+                "version": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[]",
+                    "capabilities": "Deep Insights",
+                    "createdAt": "2026-07-08T19:35:44Z",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "true",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "true",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "false",
+                    "features.operators.openshift.io/token-auth-azure": "false",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "olm.properties": "[{\"type\": \"olm.maxOpenShiftVersion\", \"value\": \"4.23\"}]",
+                    "olm.skipRange": ">=4.2.0 <4.22.0-rhodf",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Platform Plus\",\"OpenShift Data Foundation Essentials\",\"OpenShift Data Foundation Advanced\"]",
+                    "operators.operatorframework.io/builder": "operator-sdk-v1.34.1",
+                    "operators.operatorframework.io/operator-type": "non-standalone",
+                    "operators.operatorframework.io/project_layout": "unknown"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {
+                    "owned": [
+                        {
+                            "name": "volumegroupsnapshotclasses.groupsnapshot.storage.openshift.io",
+                            "version": "v1beta1",
+                            "kind": "VolumeGroupSnapshotClass"
+                        },
+                        {
+                            "name": "volumegroupsnapshotcontents.groupsnapshot.storage.openshift.io",
+                            "version": "v1beta1",
+                            "kind": "VolumeGroupSnapshotContent"
+                        },
+                        {
+                            "name": "volumegroupsnapshots.groupsnapshot.storage.openshift.io",
+                            "version": "v1beta1",
+                            "kind": "VolumeGroupSnapshot"
+                        }
+                    ]
+                },
+                "description": "Snapshot Controller provides the snapshot controller for managing volume group snapshots",
+                "displayName": "Snapshot Controller",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": true
+                    }
+                ],
+                "keywords": [
+                    "csi",
+                    "odf-external-snapshotter-operator"
+                ],
+                "links": [
+                    {
+                        "name": "Snapshot Controller",
+                        "url": "https://github.com/red-hat-storage/external-snapshotter"
+                    }
+                ],
+                "maturity": "GA",
+                "provider": {
+                    "name": "Red Hat Storage",
+                    "url": "https://github.com/red-hat-storage"
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "",
+            "image": "registry.redhat.io/odf4/odf-external-snapshotter-operator-bundle@sha256:38ec66fa27620c469aacd760768f28242de1969814d2b952c6fd2bbc57ff2f04"
+        },
+        {
+            "name": "odf-external-snapshotter-operator",
+            "image": "registry.redhat.io/odf4/odf-external-snapshotter-rhel9-operator@sha256:3cfcb3a0db0c678f833fb48306dd9c657c90d4b90c32fbbd8a7c3bf8974bf47c"
+        }
+    ]
+}

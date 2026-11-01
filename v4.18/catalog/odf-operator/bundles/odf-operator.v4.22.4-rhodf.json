@@ -1,0 +1,132 @@
+{
+    "schema": "olm.bundle",
+    "name": "odf-operator.v4.22.4-rhodf",
+    "package": "odf-operator",
+    "image": "registry.redhat.io/odf4/odf-operator-bundle@sha256:6ab98ad9febc04d080a5c5dab0991e352a58263b916c76519a39850c9a6a030f",
+    "properties": [
+        {
+            "type": "olm.maxOpenShiftVersion",
+            "value": "4.23"
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "odf-operator",
+                "version": "4.22.4-rhodf"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[]",
+                    "capabilities": "Deep Insights",
+                    "categories": "Storage",
+                    "console.openshift.io/plugins": "[\"odf-console\"]",
+                    "containerImage": "registry.redhat.io/odf4/odf-rhel9-operator@sha256:e530915d3fe18e76a93e32747e1d010e9edf6788b1c2bc8accd1bf0a1a687fc9",
+                    "createdAt": "2026-09-16T02:42:34Z",
+                    "description": "OpenShift Data Foundation provides a common control plane for storage solutions on OpenShift Container Platform.",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "true",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "true",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "true",
+                    "features.operators.openshift.io/token-auth-azure": "true",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "olm.properties": "[{\"type\": \"olm.maxOpenShiftVersion\", \"value\": \"4.23\"}]",
+                    "olm.skipRange": ">=4.2.0 <4.22.4-rhodf",
+                    "operatorframework.io/initialization-link": "/odf/overview?show-welcome-modal=true",
+                    "operatorframework.io/suggested-namespace": "openshift-storage",
+                    "operators.openshift.io/infrastructure-features": "[\"disconnected\"]",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Platform Plus\",\"OpenShift Data Foundation Essentials\",\"OpenShift Data Foundation Advanced\"]",
+                    "operators.operatorframework.io/builder": "operator-sdk-v1.31.0",
+                    "operators.operatorframework.io/operator-type": "standalone",
+                    "operators.operatorframework.io/project_layout": "go.kubebuilder.io/v3",
+                    "repository": "https://github.com/red-hat-storage/odf-operator",
+                    "support": "Red Hat",
+                    "vendors.odf.openshift.io/kind": "[\"storagecluster.ocs.openshift.io/v1\", \"flashsystemcluster.odf.ibm.com/v1alpha1\"]"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {},
+                "description": "**Red Hat OpenShift Data Foundation** deploys three operators.\n\n### OpenShift Data Foundation\nThe OpenShift Data Foundation operator is the primary operator for\nOpenShift Data Foundation. It serves to facilitate the other operators in\nOpenShift Data Foundation by performing administrative tasks outside their\nscope as well as watching and configuring their CustomResources.\n\n### Rook\n[Rook][1] deploys and manages Ceph on OpenShift, which provides block,\nfile and object storage.\n\n### NooBaa operator\nThe NooBaa operator deploys and manages the [NooBaa][2] Multi-Cloud Gateway\non OpenShift, which provides object storage.\n\n# Core Capabilities\n* **Self-managing service:** No matter which supported storage technologies\nyou choose, OpenShift Data Foundation ensures that resources can be\ndeployed and managed automatically.\n\n* **Hyper-scale or hyper-converged:** With OpenShift Data Foundation you\ncan either build dedicated storage clusters or hyper-converged clusters\nwhere your apps run alongside storage.\n\n* **File, Block, and Object provided by OpenShift Data Foundation:**\nOpenShift Data Foundation integrates Ceph with multiple storage\npresentations including object storage (compatible with S3), block storage,\nand POSIX-compliant shared file system.\n\n* **Your data, protected:** OpenShift Data Foundation efficiently\ndistributes and replicates your data across your cluster to minimize the\nrisk of data loss. With snapshots, cloning, and versioning, no more losing\nsleep over your data.\n\n* **Elastic storage in your datacenter:** Scale is now possible in your\ndatacenter. Get started with a few terabytes, and easily scale up.\n\n* **Simplified data management:** Easily create hybrid and multi-cloud data\nstorage for your workloads, using a single namespace.\n\n# Subscriptions\nOpenShift Data Foundation requires a matching 1:1 ratio with the OpenShift\nsubscription used. The Essential subscription is included in the OpenShift\nPlatform Plus subscription. Disaster Recovery features, external mode, and\nKMS integration for encryption at rest require a bundle of OpenShift\nPlatform Plus with OpenShift Data Foundation Advanced subscription.\n\n[1]: https://rook.io\n[2]: https://www.noobaa.io\n",
+                "displayName": "OpenShift Data Foundation",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": false
+                    }
+                ],
+                "keywords": [
+                    "operator",
+                    "data",
+                    "storage"
+                ],
+                "labels": {
+                    "full_version": "4.22.4-5",
+                    "odf.openshift.io/odf-operator": "true",
+                    "operatorframework.io/arch.amd64": "supported",
+                    "operatorframework.io/arch.arm64": "supported",
+                    "operatorframework.io/arch.ppc64le": "supported",
+                    "operatorframework.io/arch.s390x": "supported"
+                },
+                "links": [
+                    {
+                        "name": "Source Code",
+                        "url": "https://github.com/red-hat-storage/odf-operator"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "Red Hat Support",
+                        "email": "ocs-support@redhat.com"
+                    }
+                ],
+                "maturity": "alpha",
+                "provider": {
+                    "name": "Red Hat"
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "devicefinder",
+            "image": "registry.redhat.io/odf4/devicefinder-rhel9@sha256:77f49ceb9e141e3e427030a7a73750a6c1268787b4077fb56cac91d6a9599542"
+        },
+        {
+            "name": "odf-console",
+            "image": "registry.redhat.io/odf4/odf-console-rhel9@sha256:35cf73e7ef5106b5f1761b005819aa281a0b5145a6490e12b301c62062f8c08b"
+        },
+        {
+            "name": "",
+            "image": "registry.redhat.io/odf4/odf-operator-bundle@sha256:6ab98ad9febc04d080a5c5dab0991e352a58263b916c76519a39850c9a6a030f"
+        },
+        {
+            "name": "odf-operator",
+            "image": "registry.redhat.io/odf4/odf-rhel9-operator@sha256:e530915d3fe18e76a93e32747e1d010e9edf6788b1c2bc8accd1bf0a1a687fc9"
+        },
+        {
+            "name": "ux-backend-server",
+            "image": "registry.redhat.io/odf4/odf-rhel9-operator@sha256:e530915d3fe18e76a93e32747e1d010e9edf6788b1c2bc8accd1bf0a1a687fc9"
+        },
+        {
+            "name": "oauth-proxy",
+            "image": "registry.redhat.io/openshift4/ose-oauth-proxy-rhel9@sha256:c1b77e5d09514955014fdea72271e5db53fec265fd7717d4e92fc89d08f93579"
+        }
+    ]
+}

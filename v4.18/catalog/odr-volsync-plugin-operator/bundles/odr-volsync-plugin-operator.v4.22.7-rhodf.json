@@ -1,0 +1,145 @@
+{
+    "schema": "olm.bundle",
+    "name": "odr-volsync-plugin-operator.v4.22.7-rhodf",
+    "package": "odr-volsync-plugin-operator",
+    "image": "registry.redhat.io/odf4/odr-volsync-plugin-operator-bundle@sha256:58a53fec66f6fb65d8afaf8e5dfa9ab9c52acb2dffd3ffb738bf609aecceb14e",
+    "properties": [
+        {
+            "type": "olm.gvk.required",
+            "value": {
+                "group": "volsync.backube",
+                "kind": "ReplicationDestination",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk.required",
+            "value": {
+                "group": "volsync.backube",
+                "kind": "ReplicationSource",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.maxOpenShiftVersion",
+            "value": "5.0"
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "odr-volsync-plugin-operator",
+                "version": "4.22.7-rhodf"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[]",
+                    "capabilities": "Deep Insights",
+                    "createdAt": "2026-10-28T06:52:00Z",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "true",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "true",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "false",
+                    "features.operators.openshift.io/token-auth-azure": "false",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "olm.properties": "[{\"type\": \"olm.maxOpenShiftVersion\", \"value\": \"5.0\"}]",
+                    "olm.skipRange": ">=4.2.0 <4.22.7-rhodf",
+                    "operatorframework.io/suggested-namespace": "openshift-dr-system",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Platform Plus\",\"OpenShift Data Foundation Essentials\",\"OpenShift Data Foundation Advanced\"]",
+                    "operators.operatorframework.io/builder": "operator-sdk-v1.41.1",
+                    "operators.operatorframework.io/project_layout": "go.kubebuilder.io/v4"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {
+                    "required": [
+                        {
+                            "name": "replicationdestinations.volsync.backube",
+                            "version": "v1alpha1",
+                            "kind": "ReplicationDestination",
+                            "displayName": "Replication Destination",
+                            "description": "A ReplicationDestination is a VolSync resource that you can use to define the destination of a VolSync replication\nor synchronization."
+                        },
+                        {
+                            "name": "replicationsources.volsync.backube",
+                            "version": "v1alpha1",
+                            "kind": "ReplicationSource",
+                            "displayName": "Replication Source",
+                            "description": "A ReplicationSource is a VolSync resource that you can use to define the source PVC and replication mover type,\nenabling you to replicate or synchronize PVC data to a remote location."
+                        }
+                    ]
+                },
+                "description": "OpenShift DR VolSync Plugin Operator provides Ceph-native volume replication for disaster recovery. It integrates with VolSync to enable efficient data protection for CephFS and RBD volumes across OpenShift clusters.",
+                "displayName": "OpenShift DR VolSync Plugin Operator",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": true
+                    }
+                ],
+                "keywords": [
+                    "ceph-volsync-plugin-operator",
+                    "data",
+                    "csi",
+                    "disaster recovery",
+                    "replication",
+                    "storage",
+                    "backup",
+                    "ceph"
+                ],
+                "links": [
+                    {
+                        "name": "Ceph Volsync Plugin Operator",
+                        "url": "https://ceph-volsync-plugin-operator.domain"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "Rakshith R",
+                        "email": "rar@redhat.com"
+                    },
+                    {
+                        "name": "Madhu Rajanna",
+                        "email": "mrajanna@redhat.com"
+                    }
+                ],
+                "maturity": "alpha",
+                "provider": {
+                    "name": "Red Hat, Inc.",
+                    "url": "github.com/RamenDR/ceph-volsync-plugin"
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "odr-volsync-plugin-mover",
+            "image": "registry.redhat.io/odf4/odr-volsync-plugin-mover-rhel9@sha256:333f7321c9cf724a6acf44d580a25183b322c84047c3500b032e69db72b791e8"
+        },
+        {
+            "name": "",
+            "image": "registry.redhat.io/odf4/odr-volsync-plugin-operator-bundle@sha256:58a53fec66f6fb65d8afaf8e5dfa9ab9c52acb2dffd3ffb738bf609aecceb14e"
+        },
+        {
+            "name": "odr-volsync-plugin-operator",
+            "image": "registry.redhat.io/odf4/odr-volsync-plugin-rhel9-operator@sha256:b9801553424edcc13616193ff529cc703d57372208b8ee524686615cc598427d"
+        }
+    ]
+}

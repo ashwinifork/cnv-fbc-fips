@@ -1,0 +1,36 @@
+{
+    "schema": "olm.channel",
+    "name": "stable-4.22",
+    "package": "mcg-operator",
+    "entries": [
+        {
+            "name": "mcg-operator.v4.22.0-rhodf",
+            "skipRange": ">=4.2.0 <4.22.0-rhodf"
+        },
+        {
+            "name": "mcg-operator.v4.22.2-rhodf",
+            "skipRange": ">=4.2.0 <4.22.2-rhodf",
+            "replaces": "mcg-operator.v4.22.0-rhodf"
+        },
+        {
+            "name": "mcg-operator.v4.22.3-rhodf",
+            "skipRange": ">=4.2.0 <4.22.3-rhodf",
+            "replaces": "mcg-operator.v4.22.2-rhodf"
+        },
+        {
+            "name": "mcg-operator.v4.22.4-rhodf",
+            "skipRange": ">=4.2.0 <4.22.4-rhodf",
+            "replaces": "mcg-operator.v4.22.3-rhodf"
+        },
+        {
+            "name": "mcg-operator.v4.22.6-rhodf",
+            "skipRange": ">=4.2.0 <4.22.6-rhodf",
+            "replaces": "mcg-operator.v4.22.4-rhodf"
+        },
+        {
+            "name": "mcg-operator.v4.22.7-rhodf",
+            "skipRange": ">=4.2.0 <4.22.7-rhodf",
+            "replaces": "mcg-operator.v4.22.6-rhodf"
+        }
+    ]
+}

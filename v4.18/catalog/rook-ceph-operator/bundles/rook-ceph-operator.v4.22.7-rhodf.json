@@ -1,0 +1,549 @@
+{
+    "schema": "olm.bundle",
+    "name": "rook-ceph-operator.v4.22.7-rhodf",
+    "package": "rook-ceph-operator",
+    "image": "registry.redhat.io/odf4/rook-ceph-operator-bundle@sha256:d42a559a2496d722bdc47f7a9e4715cb767929554239f7e829c82364dc78ee10",
+    "properties": [
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephBlockPool",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephBlockPoolRadosNamespace",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephBucketNotification",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephBucketTopic",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephCOSIDriver",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephClient",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephCluster",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephFilesystem",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephFilesystemMirror",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephFilesystemSubVolumeGroup",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephNFS",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephNVMeOFGateway",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephObjectRealm",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephObjectStore",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephObjectStoreAccount",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephObjectStoreUser",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephObjectZone",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephObjectZoneGroup",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ceph.rook.io",
+                "kind": "CephRBDMirror",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.maxOpenShiftVersion",
+            "value": "5.0"
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "rook-ceph-operator",
+                "version": "4.22.7-rhodf"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[\n  {\n    \"apiVersion\": \"ceph.rook.io/v1\",\n    \"kind\": \"CephCluster\",\n    \"metadata\": {\n      \"name\": \"my-rook-ceph\",\n      \"namespace\": \"my-rook-ceph\"\n    },\n    \"spec\": {\n      \"cephVersion\": {\n        \"image\": \"registry.redhat.io/rhceph/rhceph-9-rhel9@sha256:e033e100f1ba22780c0f54690a813e37459c49c6f63cb2e6d7aadd6227e463e9\"\n      },\n      \"dataDirHostPath\": \"/var/lib/rook\",\n      \"mon\": {\n        \"count\": 3\n      },\n      \"dashboard\": {\n        \"enabled\": true\n      },\n      \"network\": {\n        \"hostNetwork\": false\n      },\n      \"rbdMirroring\": {\n        \"workers\": 0\n      },\n      \"storage\": {\n        \"useAllNodes\": true,\n        \"useAllDevices\": true\n      }\n    }\n  },\n  {\n    \"apiVersion\": \"ceph.rook.io/v1\",\n    \"kind\": \"CephBlockPool\",\n    \"metadata\": {\n      \"name\": \"replicapool\",\n      \"namespace\": \"my-rook-ceph\"\n    },\n    \"spec\": {\n      \"failureDomain\": \"host\",\n      \"replicated\": {\n        \"size\": 3\n      },\n      \"annotations\": null\n    }\n  },\n  {\n    \"apiVersion\": \"ceph.rook.io/v1\",\n    \"kind\": \"CephObjectStore\",\n    \"metadata\": {\n      \"name\": \"my-store\",\n      \"namespace\": \"my-rook-ceph\"\n    },\n    \"spec\": {\n      \"metadataPool\": {\n        \"failureDomain\": \"host\",\n        \"replicated\": {\n          \"size\": 3\n        }\n      },\n      \"dataPool\": {\n        \"failureDomain\": \"host\",\n        \"replicated\": {\n          \"size\": 3\n        }\n      },\n      \"gateway\": {\n        \"type\": \"s3\",\n        \"sslCertificateRef\": null,\n        \"port\": 8080,\n        \"securePort\": null,\n        \"instances\": 1,\n        \"placement\": null,\n        \"annotations\": null,\n        \"resources\": null\n      }\n    }\n  },\n  {\n    \"apiVersion\": \"ceph.rook.io/v1\",\n    \"kind\": \"CephObjectStoreUser\",\n    \"metadata\": {\n      \"name\": \"my-user\",\n      \"namespace\": \"my-rook-ceph\"\n    },\n    \"spec\": {\n      \"store\": \"my-store\",\n      \"displayName\": \"my display name\"\n    }\n  },\n  {\n    \"apiVersion\": \"ceph.rook.io/v1\",\n    \"kind\": \"CephNFS\",\n    \"metadata\": {\n      \"name\": \"my-nfs\",\n      \"namespace\": \"rook-ceph\"\n    },\n    \"spec\": {\n      \"rados\": {\n        \"pool\": \"myfs-data0\",\n        \"namespace\": \"nfs-ns\"\n      },\n      \"server\": {\n        \"active\": 3,\n        \"placement\": null,\n        \"annotations\": null,\n        \"resources\": null\n      }\n    }\n  },\n  {\n    \"apiVersion\": \"ceph.rook.io/v1\",\n    \"kind\": \"CephClient\",\n    \"metadata\": {\n      \"name\": \"cinder\",\n      \"namespace\": \"rook-ceph\"\n    },\n    \"spec\": {\n      \"caps\": {\n        \"mon\": \"profile rbd\",\n        \"osd\": \"profile rbd pool=volumes, profile rbd pool=vms, profile rbd-read-only pool=images\"\n      }\n    }\n  },\n  {\n    \"apiVersion\": \"ceph.rook.io/v1\",\n    \"kind\": \"CephFilesystem\",\n    \"metadata\": {\n      \"name\": \"myfs\",\n      \"namespace\": \"rook-ceph\"\n    },\n    \"spec\": {\n      \"dataPools\": [\n        {\n          \"compressionMode\": \"\",\n          \"crushRoot\": \"\",\n          \"deviceClass\": \"\",\n          \"erasureCoded\": {\n            \"algorithm\": \"\",\n            \"codingChunks\": 0,\n            \"dataChunks\": 0\n          },\n          \"failureDomain\": \"host\",\n          \"replicated\": {\n            \"requireSafeReplicaSize\": false,\n            \"size\": 1,\n            \"targetSizeRatio\": 0.5\n          }\n        }\n      ],\n      \"metadataPool\": {\n        \"compressionMode\": \"\",\n        \"crushRoot\": \"\",\n        \"deviceClass\": \"\",\n        \"erasureCoded\": {\n          \"algorithm\": \"\",\n          \"codingChunks\": 0,\n          \"dataChunks\": 0\n        },\n        \"failureDomain\": \"\",\n        \"replicated\": {\n          \"requireSafeReplicaSize\": false,\n          \"size\": 1,\n          \"targetSizeRatio\": 0\n        }\n      },\n      \"metadataServer\": {\n        \"activeCount\": 1,\n        \"activeStandby\": true,\n        \"placement\": {},\n        \"resources\": {}\n      },\n      \"preservePoolsOnDelete\": false,\n      \"preserveFilesystemOnDelete\": false\n    }\n  },\n  {\n    \"apiVersion\": \"ceph.rook.io/v1\",\n    \"kind\": \"CephRBDMirror\",\n    \"metadata\": {\n      \"name\": \"my-rbd-mirror\",\n      \"namespace\": \"rook-ceph\"\n    },\n    \"spec\": {\n      \"annotations\": null,\n      \"count\": 1,\n      \"placement\": {\n        \"topologyKey\": \"kubernetes.io/hostname\"\n      },\n      \"resources\": null\n    }\n  }\n]",
+                    "capabilities": "Seamless Upgrades",
+                    "containerImage": "registry.redhat.io/odf4/rook-ceph-rhel9-operator@sha256:15193f4582e61b1de2259ee4fe0db7fc55eca0cfe99dcd6478ce02264992cf58",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "true",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "true",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "false",
+                    "features.operators.openshift.io/token-auth-azure": "false",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "olm.properties": "[{\"type\": \"olm.maxOpenShiftVersion\", \"value\": \"5.0\"}]",
+                    "olm.skipRange": ">=4.2.0 <4.22.7-rhodf",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Platform Plus\",\"OpenShift Data Foundation Essentials\",\"OpenShift Data Foundation Advanced\"]",
+                    "operators.operatorframework.io/builder": "operator-sdk-v1.25.0",
+                    "operators.operatorframework.io/operator-type": "non-standalone",
+                    "operators.operatorframework.io/project_layout": "unknown",
+                    "repository": "https://github.com/red-hat-storage/rook",
+                    "tectonic-visibility": "ocs"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {
+                    "owned": [
+                        {
+                            "name": "cephclusters.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephCluster",
+                            "displayName": "Ceph Cluster",
+                            "description": "Represents a Ceph cluster."
+                        },
+                        {
+                            "name": "cephblockpools.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephBlockPool",
+                            "displayName": "Ceph Block Pool",
+                            "description": "Represents a Ceph Block Pool."
+                        },
+                        {
+                            "name": "cephobjectstores.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephObjectStore",
+                            "displayName": "Ceph Object Store",
+                            "description": "Represents a Ceph Object Store.",
+                            "specDescriptors": [
+                                {
+                                    "path": "dataPool.erasureCoded.codingChunks",
+                                    "displayName": "Coding Chunks",
+                                    "description": "Coding Chunks",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:dataPool",
+                                        "urn:alm:descriptor:com.tectonic.ui:number"
+                                    ]
+                                },
+                                {
+                                    "path": "dataPool.erasureCoded.dataChunks",
+                                    "displayName": "Data Chunks",
+                                    "description": "Data Chunks",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:dataPool",
+                                        "urn:alm:descriptor:com.tectonic.ui:number"
+                                    ]
+                                },
+                                {
+                                    "path": "dataPool.failureDomain",
+                                    "displayName": "failureDomain",
+                                    "description": "failureDomain",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:dataPool",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "dataPool.replicated.size",
+                                    "displayName": "Size",
+                                    "description": "Size",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:dataPool",
+                                        "urn:alm:descriptor:com.tectonic.ui:number"
+                                    ]
+                                },
+                                {
+                                    "path": "gateway.annotations",
+                                    "displayName": "Annotations",
+                                    "description": "Annotations",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:gateway",
+                                        "urn:alm:descriptor:io.kubernetes:annotations"
+                                    ]
+                                },
+                                {
+                                    "path": "gateway.instances",
+                                    "displayName": "Instances",
+                                    "description": "Instances",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:gateway",
+                                        "urn:alm:descriptor:com.tectonic.ui:number"
+                                    ]
+                                },
+                                {
+                                    "path": "gateway.resources",
+                                    "displayName": "Resources",
+                                    "description": "Resources",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:gateway",
+                                        "urn:alm:descriptor:com.tectonic.ui:resourceRequirements"
+                                    ]
+                                },
+                                {
+                                    "path": "gateway.placement",
+                                    "displayName": "placement",
+                                    "description": "placement",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:gateway",
+                                        "urn:alm:descriptor:io.kubernetes:placement"
+                                    ]
+                                },
+                                {
+                                    "path": "gateway.securePort",
+                                    "displayName": "securePort",
+                                    "description": "securePort",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:gateway",
+                                        "urn:alm:descriptor:io.kubernetes:securePort"
+                                    ]
+                                },
+                                {
+                                    "path": "gateway.sslCertificateRef",
+                                    "displayName": "sslCertificateRef",
+                                    "description": "sslCertificateRef",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:gateway",
+                                        "urn:alm:descriptor:io.kubernetes:sslCertificateRef"
+                                    ]
+                                },
+                                {
+                                    "path": "gateway.type",
+                                    "displayName": "Type",
+                                    "description": "Type",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:gateway",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "metadataPool.erasureCoded.codingChunks",
+                                    "displayName": "Coding Chunks",
+                                    "description": "Coding Chunks",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:metadataPool",
+                                        "urn:alm:descriptor:com.tectonic.ui:number"
+                                    ]
+                                },
+                                {
+                                    "path": "metadataPool.erasureCoded.dataChunks",
+                                    "displayName": "Data Chunks",
+                                    "description": "Data Chunks",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:metadataPool",
+                                        "urn:alm:descriptor:com.tectonic.ui:number"
+                                    ]
+                                },
+                                {
+                                    "path": "metadataPool.failureDomain",
+                                    "displayName": "failureDomain",
+                                    "description": "failureDomain",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:metadataPool",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "metadataPool.replicated.size",
+                                    "displayName": "Size",
+                                    "description": "Size",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:metadataPool",
+                                        "urn:alm:descriptor:com.tectonic.ui:number"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "cephobjectstoreusers.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephObjectStoreUser",
+                            "displayName": "Ceph Object Store User",
+                            "description": "Represents a Ceph Object Store User."
+                        },
+                        {
+                            "name": "cephnfses.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephNFS",
+                            "displayName": "Ceph NFS",
+                            "description": "Represents a cluster of Ceph NFS ganesha gateways."
+                        },
+                        {
+                            "name": "cephclients.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephClient",
+                            "displayName": "Ceph Client",
+                            "description": "Represents a Ceph User."
+                        },
+                        {
+                            "name": "cephfilesystems.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephFilesystem",
+                            "displayName": "Ceph Filesystem",
+                            "description": "Represents a Ceph Filesystem."
+                        },
+                        {
+                            "name": "cephfilesystemmirrors.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephFilesystemMirror",
+                            "displayName": "Ceph Filesystem Mirror",
+                            "description": "Represents a Ceph Filesystem Mirror."
+                        },
+                        {
+                            "name": "cephrbdmirrors.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephRBDMirror",
+                            "displayName": "Ceph RBD Mirror",
+                            "description": "Represents a Ceph RBD Mirror."
+                        },
+                        {
+                            "name": "cephobjectrealms.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephObjectRealm",
+                            "displayName": "Ceph Object Store Realm",
+                            "description": "Represents a Ceph Object Store Realm."
+                        },
+                        {
+                            "name": "cephobjectzonegroups.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephObjectZoneGroup",
+                            "displayName": "Ceph Object Store Zone Group",
+                            "description": "Represents a Ceph Object Store Zone Group."
+                        },
+                        {
+                            "name": "cephobjectzones.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephObjectZone",
+                            "displayName": "Ceph Object Store Zone",
+                            "description": "Represents a Ceph Object Store Zone."
+                        },
+                        {
+                            "name": "cephbucketnotifications.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephBucketNotification",
+                            "displayName": "Ceph Bucket Notification",
+                            "description": "Represents a Ceph Bucket Notification."
+                        },
+                        {
+                            "name": "cephbuckettopics.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephBucketTopic",
+                            "displayName": "Ceph Bucket Topic",
+                            "description": "Represents a Ceph Bucket Topic."
+                        },
+                        {
+                            "name": "cephfilesystemsubvolumegroups.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephFilesystemSubVolumeGroup",
+                            "displayName": "Ceph Filesystem SubVolumeGroup",
+                            "description": "Represents a Ceph Filesystem SubVolumeGroup."
+                        },
+                        {
+                            "name": "cephblockpoolradosnamespaces.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephBlockPoolRadosNamespace",
+                            "displayName": "Ceph BlockPool Rados Namespace",
+                            "description": "Represents a Ceph BlockPool Rados Namespace."
+                        },
+                        {
+                            "name": "cephcosidrivers.ceph.rook.io",
+                            "version": "v1",
+                            "kind": "CephCOSIDriver",
+                            "displayName": "Ceph COSI Driver",
+                            "description": "Represents a Ceph COSI Driver."
+                        }
+                    ]
+                },
+                "description": "The Rook-Ceph storage operator packages, deploys, manages, upgrades and scales Ceph storage for providing persistent storage to infrastructure services (Logging, Metrics, Registry) as well as stateful applications in Kubernetes clusters.\n\n## Rook-Ceph Storage Operator\n\nRook runs as a cloud-native service in Kubernetes clusters for optimal integration with applications in need of storage, and handles the heavy-lifting behind the scenes such as provisioning and management.\nRook orchestrates battle-tested open-source storage technology Ceph, which has years of production deployments and runs some of the worlds largest clusters.\n\nCeph is a massively scalable, software-defined, cloud native storage platform that offers block, file and object storage services.\nCeph can be used to back a wide variety of applications including relational databases, NoSQL databases, CI/CD tool-sets, messaging, AI/ML and analytics applications.\nCeph is a proven storage platform that backs some of the world's largest storage deployments and has a large vibrant open source community backing the project.\n\n## Supported features\n* **High Availability and resiliency** - Ceph has no single point of failures (SPOF) and all its components work natively in a highly available fashion\n* **Data Protection** - Ceph periodically scrub for inconsistent objects and repair them if necessary, making sure your replicas are always coherent\n* **Consistent storage platform across hybrid cloud** - Ceph can be deployed anywhere (on-premise or bare metal) and thus offers a similar experience regardless\n* **Block, File & Object storage service** - Ceph can expose your data through several storage interfaces, solving all the application use cases\n* **Scale up/down** - addition and removal of storage is fully covered by the operator.\n* **Dashboard** - The Operator deploys a dashboard for monitoring and introspecting your cluster.\n\n## Before you start\nhttps://rook.io/docs/rook/v1.0/k8s-pre-reqs.html\n",
+                "displayName": "Rook-Ceph",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": false
+                    }
+                ],
+                "keywords": [
+                    "rook",
+                    "ceph",
+                    "storage",
+                    "object storage",
+                    "open source",
+                    "block storage",
+                    "shared filesystem"
+                ],
+                "links": [
+                    {
+                        "name": "Source Code",
+                        "url": "https://github.com/red-hat-storage/rook"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "Red Hat Support",
+                        "email": "ocs-support@redhat.com"
+                    }
+                ],
+                "maturity": "alpha",
+                "minKubeVersion": "1.16.0",
+                "provider": {
+                    "name": "Red Hat",
+                    "url": "https://www.redhat.com"
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "ceph-csi",
+            "image": "registry.redhat.io/odf4/cephcsi-rhel9@sha256:b4ec1170dcd20e5dc54cac2b672aaa9ac6deac51fe00b178e48f314e3bdab140"
+        },
+        {
+            "name": "csiaddons-sidecar",
+            "image": "registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9@sha256:a94ca9b769b25e4d42f3026d0c66100eb7d1b3d27094942803f4d987c47dfa75"
+        },
+        {
+            "name": "drbd",
+            "image": "registry.redhat.io/odf4/odf-drbd-rhel9@sha256:71b67ea354b28a79f35174f1574b030f65d5ef82b9fe691d44f9112d35fa0869"
+        },
+        {
+            "name": "",
+            "image": "registry.redhat.io/odf4/rook-ceph-operator-bundle@sha256:d42a559a2496d722bdc47f7a9e4715cb767929554239f7e829c82364dc78ee10"
+        },
+        {
+            "name": "rook-container",
+            "image": "registry.redhat.io/odf4/rook-ceph-rhel9-operator@sha256:15193f4582e61b1de2259ee4fe0db7fc55eca0cfe99dcd6478ce02264992cf58"
+        },
+        {
+            "name": "csi-attacher",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-attacher-rhel9@sha256:5f210cb8ef88a64bff312e7ef16908a102a223c34e09b541e0d581b6e5fe6ac4"
+        },
+        {
+            "name": "csi-provisioner",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-provisioner-rhel9@sha256:689cf61f85fe37136e7e914e07f57ccea80c2fb102198af617d6d872ca36e9f3"
+        },
+        {
+            "name": "csi-resizer",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-resizer-rhel9@sha256:c5656e8d5cf67e4e06836c07f6267a4308f616a96c4867eb5a7b8985bb239cc5"
+        },
+        {
+            "name": "csi-snapshotter",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel9@sha256:3fbe2d6881dcacc8920d51df2d31a7f9fcafff36df96e427a8bb0c6308ee7bfa"
+        },
+        {
+            "name": "csi-node-driver-registrar",
+            "image": "registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:2a5e96bc702bc529b424e6c80f95d7d4fc4fe92f83df4a77c3b47eb3a30fe729"
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "schema": "olm.bundle",
+    "name": "recipe.v4.22.3-rhodf",
+    "package": "recipe",
+    "image": "registry.redhat.io/odf4/odr-recipe-operator-bundle@sha256:3fb402998f2fa3a6c18146858670f61d9832f7214ad56881dfebce8cfe0a602a",
+    "properties": [
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ramendr.openshift.io",
+                "kind": "Recipe",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.maxOpenShiftVersion",
+            "value": "5.0"
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "recipe",
+                "version": "4.22.3-rhodf"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[\n  {\n    \"apiVersion\": \"ramendr.openshift.io/v1alpha1\",\n    \"kind\": \"Recipe\",\n    \"metadata\": {\n      \"labels\": {\n        \"app.kubernetes.io/created-by\": \"recipe\",\n        \"app.kubernetes.io/instance\": \"recipe-sample\",\n        \"app.kubernetes.io/managed-by\": \"kustomize\",\n        \"app.kubernetes.io/name\": \"recipe\",\n        \"app.kubernetes.io/part-of\": \"recipe\"\n      },\n      \"name\": \"recipe-sample\"\n    },\n    \"spec\": null\n  }\n]",
+                    "capabilities": "Deep Insights",
+                    "createdAt": "2026-08-31T09:56:26Z",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "true",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "true",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "false",
+                    "features.operators.openshift.io/token-auth-azure": "false",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "olm.properties": "[{\"type\": \"olm.maxOpenShiftVersion\", \"value\": \"5.0\"}]",
+                    "olm.skipRange": ">=4.2.0 <4.22.3-rhodf",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Platform Plus\",\"OpenShift Data Foundation Essentials\",\"OpenShift Data Foundation Advanced\"]",
+                    "operators.operatorframework.io/builder": "operator-sdk-v1.31.0",
+                    "operators.operatorframework.io/operator-type": "non-standalone",
+                    "operators.operatorframework.io/project_layout": "go.kubebuilder.io/v3"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {
+                    "owned": [
+                        {
+                            "name": "recipes.ramendr.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "Recipe",
+                            "displayName": "Recipe",
+                            "description": "Recipe is the Schema for the recipes API"
+                        }
+                    ]
+                },
+                "description": "Recipe describes a workflow used for capturing or recovering Kubernetes resources. This can be referred to by a Ramen DRPlacementControl object when kubeObjectProtection is enabled.\n",
+                "displayName": "Recipe",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": true
+                    }
+                ],
+                "keywords": [
+                    "recipe"
+                ],
+                "links": [
+                    {
+                        "name": "Source Code",
+                        "url": "https://github.com/red-hat-storage/recipe"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "Red Hat Support",
+                        "email": "ocs-support@redhat.com"
+                    }
+                ],
+                "maturity": "alpha",
+                "provider": {
+                    "name": "Red Hat, Inc."
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "",
+            "image": "registry.redhat.io/odf4/odr-recipe-operator-bundle@sha256:3fb402998f2fa3a6c18146858670f61d9832f7214ad56881dfebce8cfe0a602a"
+        },
+        {
+            "name": "odr-operator",
+            "image": "registry.redhat.io/odf4/odr-rhel9-operator@sha256:115029ee03b8df93a274ad20fb4b15ebd4881245c99a7d7f05f0105e8ba0044e"
+        }
+    ]
+}

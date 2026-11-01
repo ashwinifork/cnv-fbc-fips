@@ -1,0 +1,130 @@
+{
+    "schema": "olm.bundle",
+    "name": "odf-prometheus-operator.v4.22.4-rhodf",
+    "package": "odf-prometheus-operator",
+    "image": "registry.redhat.io/odf4/odf-prometheus-operator-bundle@sha256:f9627f628331428bda4821ee06c4ff378f4795f445bd97e7055330aa60c0cd07",
+    "properties": [
+        {
+            "type": "olm.maxOpenShiftVersion",
+            "value": "5.0"
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "odf-prometheus-operator",
+                "version": "4.22.4-rhodf"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "capabilities": "Deep Insights",
+                    "categories": "Monitoring",
+                    "certified": "false",
+                    "containerImage": "registry.redhat.io/openshift4/ose-prometheus-rhel9-operator@sha256:314b40b3f044aa74299cce6258c7bacc64762f6264c1fc590bb9b11347ae6397",
+                    "createdAt": "2024-03-01T23:43:00Z",
+                    "description": "Manage the full lifecycle of configuring and managing Prometheus and Alertmanager servers.",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "true",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "true",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "false",
+                    "features.operators.openshift.io/token-auth-azure": "false",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "olm.properties": "[{\"type\": \"olm.maxOpenShiftVersion\", \"value\": \"5.0\"}]",
+                    "olm.skipRange": ">=4.2.0 <4.22.4-rhodf",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Platform Plus\",\"OpenShift Data Foundation Essentials\",\"OpenShift Data Foundation Advanced\"]",
+                    "operators.operatorframework.io/operator-type": "non-standalone",
+                    "repository": "https://github.com/prometheus-operator/prometheus-operator",
+                    "support": "Red Hat, Inc."
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {},
+                "description": "The Prometheus Operator for Kubernetes provides easy monitoring definitions for Kubernetes services and deployment and management of Prometheus instances.\n\nOnce installed, the Prometheus Operator provides the following features:\n\n* **Create/Destroy**: Easily launch a Prometheus instance for your Kubernetes namespace, a specific application or team easily using the Operator.\n* **Simple Configuration**: Configure the fundamentals of Prometheus like versions, persistence, retention policies, and replicas from a native Kubernetes resource.\n* **Target Services via Labels**: Automatically generate monitoring target configurations based on familiar Kubernetes label queries; no need to learn a Prometheus specific configuration language.\n\n### Other Supported Features\n\n**High availability**\n\nMultiple instances are run across failure zones and data is replicated. This keeps your monitoring available during an outage, when you need it most.\n\n**Updates via automated operations**\n\nNew Prometheus versions are deployed using a rolling update with no downtime, making it easy to stay up to date.\n\n**Handles the dynamic nature of containers**\n\nAlerting rules are attached to groups of containers instead of individual instances, which is ideal for the highly dynamic nature of container deployment.\n",
+                "displayName": "Prometheus Operator",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": false
+                    }
+                ],
+                "keywords": [
+                    "prometheus",
+                    "monitoring",
+                    "tsdb",
+                    "alerting",
+                    "observability"
+                ],
+                "labels": {
+                    "full_version": "4.22.4-5",
+                    "operatorframework.io/arch.amd64": "supported",
+                    "operatorframework.io/arch.ppc64le": "supported",
+                    "operatorframework.io/arch.s390x": "supported"
+                },
+                "links": [
+                    {
+                        "name": "Prometheus",
+                        "url": "https://www.prometheus.io/"
+                    },
+                    {
+                        "name": "Documentation",
+                        "url": "https://github.com/prometheus-operator/prometheus-operator/tree/master/Documentation"
+                    },
+                    {
+                        "name": "Prometheus Operator",
+                        "url": "https://github.com/prometheus-operator/prometheus-operator"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "Red Hat",
+                        "email": "openshift-operators@redhat.com"
+                    }
+                ],
+                "maturity": "beta",
+                "minKubeVersion": "1.16.0",
+                "provider": {
+                    "name": "Red Hat"
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "",
+            "image": "registry.redhat.io/odf4/odf-prometheus-operator-bundle@sha256:f9627f628331428bda4821ee06c4ff378f4795f445bd97e7055330aa60c0cd07"
+        },
+        {
+            "name": "prometheus-alertmanager",
+            "image": "registry.redhat.io/openshift4/ose-prometheus-alertmanager-rhel9@sha256:0f65cdaf63881ae04a3f7b8d99eddd19c79621973c3413caa9c23379fcb05e1e"
+        },
+        {
+            "name": "prometheus-config-reloader",
+            "image": "registry.redhat.io/openshift4/ose-prometheus-config-reloader-rhel9@sha256:cc8412fb065131d741acbc8e8a9d7f4f6ba3bb99043ed00efb0f84605ee49422"
+        },
+        {
+            "name": "prometheus-operator",
+            "image": "registry.redhat.io/openshift4/ose-prometheus-rhel9-operator@sha256:314b40b3f044aa74299cce6258c7bacc64762f6264c1fc590bb9b11347ae6397"
+        },
+        {
+            "name": "prometheus-base-image",
+            "image": "registry.redhat.io/openshift4/ose-prometheus-rhel9@sha256:e9f9d90f665aa34bede233ebfa89d03d5cd0a3c6224af5fd55de2235309a485a"
+        }
+    ]
+}

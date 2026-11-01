@@ -1,0 +1,36 @@
+{
+    "schema": "olm.channel",
+    "name": "stable-4.22",
+    "package": "odf-external-snapshotter-operator",
+    "entries": [
+        {
+            "name": "odf-external-snapshotter-operator.v4.22.0-rhodf",
+            "skipRange": ">=4.2.0 <4.22.0-rhodf"
+        },
+        {
+            "name": "odf-external-snapshotter-operator.v4.22.2-rhodf",
+            "skipRange": ">=4.2.0 <4.22.2-rhodf",
+            "replaces": "odf-external-snapshotter-operator.v4.22.0-rhodf"
+        },
+        {
+            "name": "odf-external-snapshotter-operator.v4.22.3-rhodf",
+            "skipRange": ">=4.2.0 <4.22.3-rhodf",
+            "replaces": "odf-external-snapshotter-operator.v4.22.2-rhodf"
+        },
+        {
+            "name": "odf-external-snapshotter-operator.v4.22.4-rhodf",
+            "skipRange": ">=4.2.0 <4.22.4-rhodf",
+            "replaces": "odf-external-snapshotter-operator.v4.22.3-rhodf"
+        },
+        {
+            "name": "odf-external-snapshotter-operator.v4.22.6-rhodf",
+            "skipRange": ">=4.2.0 <4.22.6-rhodf",
+            "replaces": "odf-external-snapshotter-operator.v4.22.4-rhodf"
+        },
+        {
+            "name": "odf-external-snapshotter-operator.v4.22.7-rhodf",
+            "skipRange": ">=4.2.0 <4.22.7-rhodf",
+            "replaces": "odf-external-snapshotter-operator.v4.22.6-rhodf"
+        }
+    ]
+}

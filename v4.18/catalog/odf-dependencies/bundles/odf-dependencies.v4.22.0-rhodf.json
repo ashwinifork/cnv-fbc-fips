@@ -1,0 +1,166 @@
+{
+    "schema": "olm.bundle",
+    "name": "odf-dependencies.v4.22.0-rhodf",
+    "package": "odf-dependencies",
+    "image": "registry.redhat.io/odf4/odf-dependencies-operator-bundle@sha256:9361befe3f0fe01ff32ecf2d7de1a3f6ffac4b43a13e654a276798c196e0131b",
+    "properties": [
+        {
+            "type": "olm.maxOpenShiftVersion",
+            "value": "4.23"
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "odf-dependencies",
+                "version": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.package.required",
+            "value": {
+                "packageName": "cephcsi-operator",
+                "versionRange": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.package.required",
+            "value": {
+                "packageName": "mcg-operator",
+                "versionRange": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.package.required",
+            "value": {
+                "packageName": "ocs-client-operator",
+                "versionRange": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.package.required",
+            "value": {
+                "packageName": "ocs-operator",
+                "versionRange": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.package.required",
+            "value": {
+                "packageName": "ocs-tls-profiles",
+                "versionRange": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.package.required",
+            "value": {
+                "packageName": "odf-csi-addons-operator",
+                "versionRange": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.package.required",
+            "value": {
+                "packageName": "odf-external-snapshotter-operator",
+                "versionRange": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.package.required",
+            "value": {
+                "packageName": "odf-prometheus-operator",
+                "versionRange": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.package.required",
+            "value": {
+                "packageName": "recipe",
+                "versionRange": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.package.required",
+            "value": {
+                "packageName": "rook-ceph-operator",
+                "versionRange": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[]",
+                    "createdAt": "2026-07-08T19:35:13Z",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "true",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "true",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "false",
+                    "features.operators.openshift.io/token-auth-azure": "false",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "olm.properties": "[{\"type\": \"olm.maxOpenShiftVersion\", \"value\": \"4.23\"}]",
+                    "olm.skipRange": ">=4.2.0 <4.22.0-rhodf",
+                    "operatorframework.io/suggested-namespace": "openshift-storage",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Platform Plus\",\"OpenShift Data Foundation Essentials\",\"OpenShift Data Foundation Advanced\"]",
+                    "operators.operatorframework.io/builder": "operator-sdk-v1.31.0",
+                    "operators.operatorframework.io/operator-type": "non-standalone",
+                    "operators.operatorframework.io/project_layout": "go.kubebuilder.io/v3"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {},
+                "description": "deploys dependencies.\n",
+                "displayName": "Data Foundation Dependencies",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": false
+                    }
+                ],
+                "labels": {
+                    "full_version": "4.22.0-115",
+                    "operatorframework.io/arch.amd64": "supported",
+                    "operatorframework.io/arch.ppc64le": "supported",
+                    "operatorframework.io/arch.s390x": "supported"
+                },
+                "links": [
+                    {
+                        "name": "Source Code",
+                        "url": "https://github.com/red-hat-storage/odf-operator"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "Red Hat Support",
+                        "email": "ocs-support@redhat.com"
+                    }
+                ],
+                "maturity": "alpha",
+                "minKubeVersion": "1.16.0",
+                "provider": {
+                    "name": "Red Hat"
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "",
+            "image": "registry.redhat.io/odf4/odf-dependencies-operator-bundle@sha256:9361befe3f0fe01ff32ecf2d7de1a3f6ffac4b43a13e654a276798c196e0131b"
+        }
+    ]
+}

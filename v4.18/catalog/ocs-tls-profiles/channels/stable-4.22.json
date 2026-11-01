@@ -1,0 +1,36 @@
+{
+    "schema": "olm.channel",
+    "name": "stable-4.22",
+    "package": "ocs-tls-profiles",
+    "entries": [
+        {
+            "name": "ocs-tls-profiles.v4.22.0-rhodf",
+            "skipRange": ">=4.2.0 <4.22.0-rhodf"
+        },
+        {
+            "name": "ocs-tls-profiles.v4.22.2-rhodf",
+            "skipRange": ">=4.2.0 <4.22.2-rhodf",
+            "replaces": "ocs-tls-profiles.v4.22.0-rhodf"
+        },
+        {
+            "name": "ocs-tls-profiles.v4.22.3-rhodf",
+            "skipRange": ">=4.2.0 <4.22.3-rhodf",
+            "replaces": "ocs-tls-profiles.v4.22.2-rhodf"
+        },
+        {
+            "name": "ocs-tls-profiles.v4.22.4-rhodf",
+            "skipRange": ">=4.2.0 <4.22.4-rhodf",
+            "replaces": "ocs-tls-profiles.v4.22.3-rhodf"
+        },
+        {
+            "name": "ocs-tls-profiles.v4.22.6-rhodf",
+            "skipRange": ">=4.2.0 <4.22.6-rhodf",
+            "replaces": "ocs-tls-profiles.v4.22.4-rhodf"
+        },
+        {
+            "name": "ocs-tls-profiles.v4.22.7-rhodf",
+            "skipRange": ">=4.2.0 <4.22.7-rhodf",
+            "replaces": "ocs-tls-profiles.v4.22.6-rhodf"
+        }
+    ]
+}

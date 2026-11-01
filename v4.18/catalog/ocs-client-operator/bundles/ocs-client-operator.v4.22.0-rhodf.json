@@ -1,0 +1,342 @@
+{
+    "schema": "olm.bundle",
+    "name": "ocs-client-operator.v4.22.0-rhodf",
+    "package": "ocs-client-operator",
+    "image": "registry.redhat.io/odf4/ocs-client-operator-bundle@sha256:17335f3ac57331ca81b8458224351bc6983a4f785ea52f4bdd003c12a6645bd6",
+    "properties": [
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ocs.openshift.io",
+                "kind": "StorageClient",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.maxOpenShiftVersion",
+            "value": "4.23"
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "ocs-client-operator",
+                "version": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.package.required",
+            "value": {
+                "packageName": "cephcsi-operator",
+                "versionRange": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.package.required",
+            "value": {
+                "packageName": "odf-csi-addons-operator",
+                "versionRange": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.package.required",
+            "value": {
+                "packageName": "odf-external-snapshotter-operator",
+                "versionRange": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.package.required",
+            "value": {
+                "packageName": "recipe",
+                "versionRange": "4.22.0-rhodf"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[]",
+                    "capabilities": "Deep Insights",
+                    "categories": "Storage",
+                    "console.openshift.io/plugins": "[\"odf-client-console\"]",
+                    "containerImage": "registry.redhat.io/odf4/ocs-client-rhel9-operator@sha256:3b1b21b7b56bdbb7d3f4ec4e2046ef97a6ca14590c0d9acb5108ec57a1f2294b",
+                    "createdAt": "2026-07-08T19:30:55Z",
+                    "description": "OpenShift Data Foundation client operator enables consumption of storage services from a remote centralized OpenShift Data Foundation provider cluster.",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "true",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "true",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "false",
+                    "features.operators.openshift.io/token-auth-azure": "false",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "olm.properties": "[{\"type\": \"olm.maxOpenShiftVersion\", \"value\": \"4.23\"}]",
+                    "olm.skipRange": ">=4.2.0 <4.22.0-rhodf",
+                    "operatorframework.io/suggested-namespace": "openshift-storage",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Platform Plus\",\"OpenShift Data Foundation Essentials\",\"OpenShift Data Foundation Advanced\"]",
+                    "operators.operatorframework.io/builder": "operator-sdk-v1.34.1",
+                    "operators.operatorframework.io/operator-type": "standalone",
+                    "operators.operatorframework.io/project_layout": "go.kubebuilder.io/v4",
+                    "repository": "https://github.com/red-hat-storage/ocs-client-operator",
+                    "support": "Red Hat"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {
+                    "owned": [
+                        {
+                            "name": "storageclients.ocs.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "StorageClient",
+                            "displayName": "Storage Client",
+                            "description": "StorageClient is the Schema for the storageclients API"
+                        }
+                    ]
+                },
+                "description": "OpenShift Data Foundation client operator enables consumption of storage services from a remote centralized OpenShift Data Foundation provider cluster.",
+                "displayName": "OpenShift Data Foundation Client",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": true
+                    }
+                ],
+                "keywords": [
+                    "operator",
+                    "data",
+                    "storage"
+                ],
+                "labels": {
+                    "full_version": "4.22.0-115",
+                    "operatorframework.io/arch.amd64": "supported",
+                    "operatorframework.io/arch.arm64": "supported",
+                    "operatorframework.io/arch.ppc64le": "supported",
+                    "operatorframework.io/arch.s390x": "supported"
+                },
+                "links": [
+                    {
+                        "name": "OCS Client Operator",
+                        "url": "https://github.com/red-hat-storage/ocs-client-operator"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "Red Hat",
+                        "email": "ocs-support@redhat.com"
+                    }
+                ],
+                "maturity": "alpha",
+                "provider": {
+                    "name": "Red Hat"
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "cephcsi",
+            "image": "registry.redhat.io/odf4/cephcsi-rhel9@sha256:7355306c73c7eeddbb1baeeef5f8172f70a9f479b87400e4d93e241707b93100"
+        },
+        {
+            "name": "ocs-client-console",
+            "image": "registry.redhat.io/odf4/ocs-client-console-rhel9@sha256:e7cd3b8d81d7a9ecafac1cc1f10041642e718e31a9e205e5eb0ea0d9cdd45d97"
+        },
+        {
+            "name": "",
+            "image": "registry.redhat.io/odf4/ocs-client-operator-bundle@sha256:17335f3ac57331ca81b8458224351bc6983a4f785ea52f4bdd003c12a6645bd6"
+        },
+        {
+            "name": "ocs-client-operator",
+            "image": "registry.redhat.io/odf4/ocs-client-rhel9-operator@sha256:3b1b21b7b56bdbb7d3f4ec4e2046ef97a6ca14590c0d9acb5108ec57a1f2294b"
+        },
+        {
+            "name": "csi-addons",
+            "image": "registry.redhat.io/odf4/odf-csi-addons-sidecar-rhel9@sha256:413f85e133b0aa63d122bd7a53d32c067c57cf74267a97fd2e32c4bf9660677a"
+        },
+        {
+            "name": "ex-snapshotter",
+            "image": "registry.redhat.io/odf4/odf-external-snapshotter-sidecar-rhel9@sha256:d1124528884ed36ae9bcb13b311647080c15b37f76cdc7beaaef4c4fdb4cea0b"
+        },
+        {
+            "name": "csi-attacher-v4.20",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-attacher-rhel9@sha256:2dd385f7037eb5b29d8f9d62972f10d4b96b2d9bd7a752680b5df03c4ddd24e1"
+        },
+        {
+            "name": "csi-attacher-v4.16",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-attacher-rhel9@sha256:6dbebb01f3048d631c3295f77c7b8da5e9ef74b86086036728b620ec031a23c3"
+        },
+        {
+            "name": "csi-attacher-v4.19",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-attacher-rhel9@sha256:70fb410a806e22bbac3d909b2ec14855a8433f8888138c3b551812b5c254d205"
+        },
+        {
+            "name": "csi-attacher-v4.18",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-attacher-rhel9@sha256:70fb410a806e22bbac3d909b2ec14855a8433f8888138c3b551812b5c254d205"
+        },
+        {
+            "name": "csi-attacher-v4.17",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-attacher-rhel9@sha256:ae4ca064048375f26bda70e5db736d53bf2eaf8dbce93aa3230349bd5bd9e524"
+        },
+        {
+            "name": "csi-attacher-v4.21",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-attacher-rhel9@sha256:d76d5daff3a4e5f1d8a257423d52a79fed4f3f436bdd460ac87bd8019fe50ecb"
+        },
+        {
+            "name": "csi-attacher-v4.22",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-attacher-rhel9@sha256:db02739b53ae0af27b90424924fb4e403021154bf4425be0f4ffeb689d73bbf6"
+        },
+        {
+            "name": "csi-provisioner-v4.19",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-provisioner-rhel9@sha256:0c64e19e55ab0e7ce5bc1163361de65535e5dc56a0f789d28da0e6af81a202c2"
+        },
+        {
+            "name": "csi-provisioner-v4.18",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-provisioner-rhel9@sha256:0c64e19e55ab0e7ce5bc1163361de65535e5dc56a0f789d28da0e6af81a202c2"
+        },
+        {
+            "name": "csi-provisioner-v4.22",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-provisioner-rhel9@sha256:974a3f8aa688c646b4f88d61436afc8fc184221c79fadf1392b0ea1b63d56248"
+        },
+        {
+            "name": "csi-provisioner-v4.21",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-provisioner-rhel9@sha256:9cfa75da58df61b26eead2e93d628e716d573b4f18749a907704bf4060716ff5"
+        },
+        {
+            "name": "csi-provisioner-v4.16",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-provisioner-rhel9@sha256:b87aeb442a94c0b869245ce58e5cec62f01e0b9160a1ddb52387f80f44dbb412"
+        },
+        {
+            "name": "csi-provisioner-v4.17",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-provisioner-rhel9@sha256:dd5c8c6c21df7362a72acc2a168e4e74c28b929e9b61ce76eb5e48b0cb2a3759"
+        },
+        {
+            "name": "csi-provisioner-v4.20",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-provisioner-rhel9@sha256:df5cf86899712cc2dbc41f049c0a806f961d820f2a5d0e1b948314885d28816b"
+        },
+        {
+            "name": "csi-resizer-v4.22",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-resizer-rhel9@sha256:56eb6d65c6631d587239e5813a9056a957a5b6df89b761908b925b3d8d4a05c7"
+        },
+        {
+            "name": "csi-resizer-v4.17",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-resizer-rhel9@sha256:b93d8e3b0dbedd25b9469ee1cc74a14f69325f7b7ff7dfc55b3db11cbebb5750"
+        },
+        {
+            "name": "csi-resizer-v4.20",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-resizer-rhel9@sha256:cc0e7a2ed6af322cfbeb81e961c5379d07e1433baf71c6fbf3218d257033df9e"
+        },
+        {
+            "name": "csi-resizer-v4.18",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-resizer-rhel9@sha256:d0ae0e3297bda5cff1c40a637c094f77b92aa0df8a33446ead96c20802a1dc1c"
+        },
+        {
+            "name": "csi-resizer-v4.19",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-resizer-rhel9@sha256:d0ae0e3297bda5cff1c40a637c094f77b92aa0df8a33446ead96c20802a1dc1c"
+        },
+        {
+            "name": "csi-resizer-v4.16",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-resizer-rhel9@sha256:e9352aa4e74dd774ac23c0e72b99c4294e47721eed89c99cbea2b1ba9d484579"
+        },
+        {
+            "name": "csi-resizer-v4.21",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-resizer-rhel9@sha256:f3815a5be77c8035d5fa49c49958c32b8a4ac630cedb78049d25773613bea439"
+        },
+        {
+            "name": "csi-snapshot-metdata-v4.22",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshot-metadata-rhel9@sha256:593ab472aa02becde1c1b7f788f1a2894cb443fa9a5ee9ae27e19582b9caa9ab"
+        },
+        {
+            "name": "csi-snapshot-metdata-v4.20",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshot-metadata-rhel9@sha256:c9cf708349c97e6b48ab9dc3410120b76df774f2469754902f64e8b9c2230238"
+        },
+        {
+            "name": "csi-snapshot-metdata-v4.18",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshot-metadata-rhel9@sha256:c9cf708349c97e6b48ab9dc3410120b76df774f2469754902f64e8b9c2230238"
+        },
+        {
+            "name": "csi-snapshot-metdata-v4.19",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshot-metadata-rhel9@sha256:c9cf708349c97e6b48ab9dc3410120b76df774f2469754902f64e8b9c2230238"
+        },
+        {
+            "name": "csi-snapshot-metdata-v4.16",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshot-metadata-rhel9@sha256:c9cf708349c97e6b48ab9dc3410120b76df774f2469754902f64e8b9c2230238"
+        },
+        {
+            "name": "csi-snapshot-metdata-v4.17",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshot-metadata-rhel9@sha256:c9cf708349c97e6b48ab9dc3410120b76df774f2469754902f64e8b9c2230238"
+        },
+        {
+            "name": "csi-snapshot-metdata-v4.21",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshot-metadata-rhel9@sha256:d6161278dd502a8d2cbc22314b548b2dbd90b8ff7880dbd63f862a12b20bb5eb"
+        },
+        {
+            "name": "csi-snapshotter-v4.22",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel9@sha256:059b9b65cc97477480c95439fc8783cd7b530f64d7aad04e93c24163dc130702"
+        },
+        {
+            "name": "csi-snapshotter-v4.21",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel9@sha256:4a15c9648875d34dd05cc725a0814efb20d9ef4fe56dbd28b7e83d4f41b633c8"
+        },
+        {
+            "name": "csi-snapshotter-v4.20",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel9@sha256:4cbb22cbc41ab3d8e55e595303c33a165cf0d60cc7f11ca78fff28d908744c85"
+        },
+        {
+            "name": "csi-snapshotter-v4.17",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel9@sha256:52f42f2a6f3545dfbba4a55bfc355560dae528a3dfc9169cb71469f0d748f539"
+        },
+        {
+            "name": "csi-snapshotter-v4.19",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel9@sha256:630477c9935306226982bfd95864a468223b12869300f4acf4efee1472e3be7f"
+        },
+        {
+            "name": "csi-snapshotter-v4.18",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel9@sha256:630477c9935306226982bfd95864a468223b12869300f4acf4efee1472e3be7f"
+        },
+        {
+            "name": "csi-snapshotter-v4.16",
+            "image": "registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel9@sha256:c5d5a89dd3adfee4d26962eda8fe4cbef691614f186b1216eeab9d2135e66d28"
+        },
+        {
+            "name": "csi-registrar-v4.20",
+            "image": "registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:1caccc701d4e3b624c9d0a443c2fc4c5db30d9d33ecf6ae61ad87e67d5bafd3e"
+        },
+        {
+            "name": "csi-registrar-v4.22",
+            "image": "registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:2258a4abd2d704d08d6f94e674c4d7d90e28da89be61ff1be75d50b77fb73f6a"
+        },
+        {
+            "name": "csi-registrar-v4.17",
+            "image": "registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:3b8f538dc44c787a8c0dfe425ffc24cd9cdcc5323672465019c799bc373e4ee9"
+        },
+        {
+            "name": "csi-registrar-v4.16",
+            "image": "registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:50a2c30780a367f6cf118af7c2685ec89bbd1df954312668c643a506693e3484"
+        },
+        {
+            "name": "csi-registrar-v4.21",
+            "image": "registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:aa590e7fc5391b1007aa63e4e4488de68ce3695cc319d50a3f9b438deda90b29"
+        },
+        {
+            "name": "csi-registrar-v4.19",
+            "image": "registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:f96a3eed0338c749dc2de2e518f43c2abde2b3135ed53eb5a1dccc99cf3d9fb7"
+        },
+        {
+            "name": "csi-registrar-v4.18",
+            "image": "registry.redhat.io/openshift4/ose-csi-node-driver-registrar-rhel9@sha256:f96a3eed0338c749dc2de2e518f43c2abde2b3135ed53eb5a1dccc99cf3d9fb7"
+        }
+    ]
+}

@@ -1,0 +1,157 @@
+{
+    "schema": "olm.bundle",
+    "name": "odr-hub-operator.v4.22.3-rhodf",
+    "package": "odr-hub-operator",
+    "image": "registry.redhat.io/odf4/odr-hub-operator-bundle@sha256:dfb64f7372cfbf43752b4921ac25700f0a78fb32643930b7ced5dc04ddc28aff",
+    "properties": [
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ramendr.openshift.io",
+                "kind": "DRCluster",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ramendr.openshift.io",
+                "kind": "DRPlacementControl",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "ramendr.openshift.io",
+                "kind": "DRPolicy",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.maxOpenShiftVersion",
+            "value": "5.0"
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "odr-hub-operator",
+                "version": "4.22.3-rhodf"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[\n  {\n    \"apiVersion\": \"ramendr.openshift.io/v1alpha1\",\n    \"kind\": \"DRCluster\",\n    \"metadata\": {\n      \"name\": \"east\"\n    },\n    \"spec\": {\n      \"region\": \"east\",\n      \"s3ProfileName\": \"s3-profile-of-east\"\n    }\n  },\n  {\n    \"apiVersion\": \"ramendr.openshift.io/v1alpha1\",\n    \"kind\": \"DRCluster\",\n    \"metadata\": {\n      \"name\": \"east1\"\n    },\n    \"spec\": {\n      \"cidrs\": [\n        \"192.168.39.45/32\"\n      ],\n      \"clusterFence\": \"ManuallyFenced\",\n      \"region\": \"east\",\n      \"s3ProfileName\": \"s3-profile-of-east1\"\n    }\n  },\n  {\n    \"apiVersion\": \"ramendr.openshift.io/v1alpha1\",\n    \"kind\": \"DRPlacementControl\",\n    \"metadata\": {\n      \"name\": \"drplacementcontrol-sample\",\n      \"namespace\": \"application-namespace\"\n    },\n    \"spec\": {\n      \"drPolicyRef\": {\n        \"name\": \"drpolicy-sample\"\n      },\n      \"kubeObjectProtection\": {\n        \"captureInterval\": \"1m\",\n        \"captureOrder\": [\n          {\n            \"includedResources\": [\n              \"ConfigMap\",\n              \"Secret\"\n            ],\n            \"name\": \"config\"\n          },\n          {\n            \"excludedResources\": [\n              \"ConfigMap\",\n              \"Secret\"\n            ],\n            \"includeClusterResources\": true,\n            \"name\": \"everything\"\n          }\n        ],\n        \"recoverOrder\": [\n          {\n            \"backupName\": \"config\",\n            \"includedResources\": [\n              \"ConfigMap\",\n              \"Secret\"\n            ]\n          },\n          {\n            \"backupName\": \"everything\",\n            \"includedResources\": [\n              \"*\"\n            ]\n          }\n        ]\n      },\n      \"placementRef\": {\n        \"kind\": \"PlacementRule\",\n        \"name\": \"application-placement-rule\"\n      },\n      \"preferredCluster\": \"east\",\n      \"pvcSelector\": {\n        \"matchLabels\": {\n          \"any-pvc-label\": \"value\"\n        }\n      },\n      \"retainNamespaceSCCAcrossPeers\": false\n    }\n  },\n  {\n    \"apiVersion\": \"ramendr.openshift.io/v1alpha1\",\n    \"kind\": \"DRPolicy\",\n    \"metadata\": {\n      \"name\": \"drpolicy-sample\"\n    },\n    \"spec\": {\n      \"drClusters\": [\n        \"east\",\n        \"west\"\n      ],\n      \"replicationClassSelector\": {\n        \"matchLabels\": {\n          \"class\": \"ramen-replication-class\"\n        }\n      },\n      \"schedulingInterval\": \"1h\",\n      \"volumeSnapshotClassSelector\": {\n        \"matchLabels\": {\n          \"class\": \"ramen-snapshot-class\"\n        }\n      }\n    }\n  },\n  {\n    \"apiVersion\": \"ramendr.openshift.io/v1alpha1\",\n    \"kind\": \"DRPolicy\",\n    \"metadata\": {\n      \"name\": \"metrodr-drpolicy-sample\"\n    },\n    \"spec\": {\n      \"drClusters\": [\n        \"east1\",\n        \"east2\"\n      ],\n      \"replicationClassSelector\": {},\n      \"schedulingInterval\": {},\n      \"volumeSnapshotClassSelector\": {}\n    }\n  }\n]",
+                    "capabilities": "Seamless Upgrades",
+                    "createdAt": "2026-08-31T09:55:57Z",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "true",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "true",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "false",
+                    "features.operators.openshift.io/token-auth-azure": "false",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "olm.properties": "[{\"type\": \"olm.maxOpenShiftVersion\", \"value\": \"5.0\"}]",
+                    "olm.skipRange": ">=4.2.0 <4.22.3-rhodf",
+                    "operatorframework.io/suggested-namespace": "openshift-dr-system",
+                    "operators.openshift.io/infrastructure-features": "[\"disconnected\"]",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Platform Plus\",\"OpenShift Data Foundation Essentials\",\"OpenShift Data Foundation Advanced\"]",
+                    "operators.operatorframework.io/builder": "operator-sdk-v1.41.1",
+                    "operators.operatorframework.io/project_layout": "go.kubebuilder.io/v4"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {
+                    "owned": [
+                        {
+                            "name": "drclusters.ramendr.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "DRCluster",
+                            "displayName": "DRCluster",
+                            "description": "DRCluster is the Schema for the drclusters API"
+                        },
+                        {
+                            "name": "drplacementcontrols.ramendr.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "DRPlacementControl",
+                            "displayName": "DRPlacement Control",
+                            "description": "DRPlacementControl is the Schema for the drplacementcontrols API"
+                        },
+                        {
+                            "name": "drpolicies.ramendr.openshift.io",
+                            "version": "v1alpha1",
+                            "kind": "DRPolicy",
+                            "displayName": "DRPolicy",
+                            "description": "DRPolicy is the Schema for the drpolicies API"
+                        }
+                    ]
+                },
+                "description": "OpenShift DR Hub is a disaster-recovery orchestrator for stateful applications. It operates from an Advanced Cluster Management (ACM) hub cluster to orchestrate the recovery of application state, and scheduling of ACM PlacementRule for disaster recovery operations.",
+                "displayName": "Openshift DR Hub Operator",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": true
+                    }
+                ],
+                "keywords": [
+                    "Storage",
+                    "Integration & Delivery",
+                    "OpenShift Optional"
+                ],
+                "labels": {
+                    "full_version": "4.22.3-5",
+                    "operatorframework.io/arch.amd64": "supported",
+                    "operatorframework.io/arch.ppc64le": "supported",
+                    "operatorframework.io/arch.s390x": "supported"
+                },
+                "links": [
+                    {
+                        "name": "Source Code",
+                        "url": "https://github.com/red-hat-storage/ramen"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "Red Hat Support",
+                        "email": "ocs-support@redhat.com"
+                    }
+                ],
+                "maturity": "alpha",
+                "provider": {
+                    "name": "Red Hat, Inc."
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "",
+            "image": "registry.redhat.io/odf4/odr-hub-operator-bundle@sha256:dfb64f7372cfbf43752b4921ac25700f0a78fb32643930b7ced5dc04ddc28aff"
+        },
+        {
+            "name": "odr-operator",
+            "image": "registry.redhat.io/odf4/odr-rhel9-operator@sha256:115029ee03b8df93a274ad20fb4b15ebd4881245c99a7d7f05f0105e8ba0044e"
+        },
+        {
+            "name": "rbac-proxy",
+            "image": "registry.redhat.io/openshift4/ose-kube-rbac-proxy-rhel9@sha256:768eb63513b08318e9c633094d60b1a0ecdedc93bfaf22592f4f9ac4e57eeacd"
+        }
+    ]
+}

@@ -1,0 +1,986 @@
+{
+    "schema": "olm.bundle",
+    "name": "mcg-operator.v4.22.6-rhodf",
+    "package": "mcg-operator",
+    "image": "registry.redhat.io/odf4/mcg-operator-bundle@sha256:f6ecd6840262e4a932d23337f47f94afaa5fe7d413985ad28a1fb99e52d2a883",
+    "properties": [
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "noobaa.io",
+                "kind": "BackingStore",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "noobaa.io",
+                "kind": "BucketClass",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "noobaa.io",
+                "kind": "NamespaceStore",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "noobaa.io",
+                "kind": "NooBaa",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "noobaa.io",
+                "kind": "NooBaaAccount",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "objectbucket.io",
+                "kind": "ObjectBucket",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "objectbucket.io",
+                "kind": "ObjectBucketClaim",
+                "version": "v1alpha1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "postgresql.cnpg.noobaa.io",
+                "kind": "Backup",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "postgresql.cnpg.noobaa.io",
+                "kind": "Cluster",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "postgresql.cnpg.noobaa.io",
+                "kind": "ClusterImageCatalog",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "postgresql.cnpg.noobaa.io",
+                "kind": "Database",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "postgresql.cnpg.noobaa.io",
+                "kind": "FailoverQuorum",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "postgresql.cnpg.noobaa.io",
+                "kind": "ImageCatalog",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "postgresql.cnpg.noobaa.io",
+                "kind": "Pooler",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "postgresql.cnpg.noobaa.io",
+                "kind": "Publication",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "postgresql.cnpg.noobaa.io",
+                "kind": "ScheduledBackup",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.gvk",
+            "value": {
+                "group": "postgresql.cnpg.noobaa.io",
+                "kind": "Subscription",
+                "version": "v1"
+            }
+        },
+        {
+            "type": "olm.maxOpenShiftVersion",
+            "value": "5.0"
+        },
+        {
+            "type": "olm.package",
+            "value": {
+                "packageName": "mcg-operator",
+                "version": "4.22.6-rhodf"
+            }
+        },
+        {
+            "type": "olm.csv.metadata",
+            "value": {
+                "annotations": {
+                    "alm-examples": "[{\"kind\":\"NooBaa\",\"apiVersion\":\"noobaa.io/v1alpha1\",\"metadata\":{\"name\":\"noobaa\"},\"spec\":{\"cleanupPolicy\":{},\"security\":{\"kms\":{}},\"loadBalancerSourceSubnets\":{},\"autoscaler\":{},\"bucketLogging\":{},\"bucketNotifications\":{\"enabled\":false}},\"status\":{\"lastKeyRotateTime\":null}},{\"kind\":\"BackingStore\",\"apiVersion\":\"noobaa.io/v1alpha1\",\"metadata\":{\"name\":\"default\"},\"spec\":{\"type\":\"\"},\"status\":{\"mode\":{}}},{\"kind\":\"NamespaceStore\",\"apiVersion\":\"noobaa.io/v1alpha1\",\"metadata\":{\"name\":\"default\"},\"spec\":{\"type\":\"\"},\"status\":{\"mode\":{}}},{\"kind\":\"BucketClass\",\"apiVersion\":\"noobaa.io/v1alpha1\",\"metadata\":{\"name\":\"default\"},\"spec\":{},\"status\":{}},{\"kind\":\"NooBaaAccount\",\"apiVersion\":\"noobaa.io/v1alpha1\",\"metadata\":{\"name\":\"default\"},\"spec\":{\"allow_bucket_creation\":false},\"status\":{}}]",
+                    "capabilities": "Seamless Upgrades",
+                    "categories": "Storage,Big Data",
+                    "certified": "false",
+                    "containerImage": "registry.redhat.io/odf4/mcg-rhel9-operator@sha256:56b832f8b5218b45f51d599c80575d3466e373a3745284eb5f77bebe377ef446",
+                    "createdAt": "2019-07-08T13:10:20.940Z",
+                    "description": "NooBaa is an object data service for hybrid and multi cloud environments.",
+                    "features.operators.openshift.io/cnf": "false",
+                    "features.operators.openshift.io/cni": "false",
+                    "features.operators.openshift.io/csi": "true",
+                    "features.operators.openshift.io/disconnected": "true",
+                    "features.operators.openshift.io/fips-compliant": "true",
+                    "features.operators.openshift.io/proxy-aware": "true",
+                    "features.operators.openshift.io/tls-profiles": "false",
+                    "features.operators.openshift.io/token-auth-aws": "true",
+                    "features.operators.openshift.io/token-auth-azure": "true",
+                    "features.operators.openshift.io/token-auth-gcp": "false",
+                    "olm.properties": "[{\"type\": \"olm.maxOpenShiftVersion\", \"value\": \"5.0\"}]",
+                    "olm.skipRange": ">=4.2.0 <4.22.6-rhodf",
+                    "operators.openshift.io/infrastructure-features": "\u05bf'[\"disconnected\"]'",
+                    "operators.openshift.io/valid-subscription": "[\"OpenShift Platform Plus\",\"OpenShift Data Foundation Essentials\",\"OpenShift Data Foundation Advanced\"]",
+                    "operators.operatorframework.io/operator-type": "non-standalone",
+                    "repository": "https://github.com/noobaa/noobaa-operator",
+                    "support": "Red Hat"
+                },
+                "apiServiceDefinitions": {},
+                "crdDescriptions": {
+                    "owned": [
+                        {
+                            "name": "noobaas.noobaa.io",
+                            "version": "v1alpha1",
+                            "kind": "NooBaa",
+                            "displayName": "NooBaa",
+                            "description": "A NooBaa system - Create this to start",
+                            "resources": [
+                                {
+                                    "name": "services",
+                                    "kind": "Service",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "secrets",
+                                    "kind": "Secret",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "configmaps",
+                                    "kind": "ConfigMap",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "statefulsets.apps",
+                                    "kind": "StatefulSet",
+                                    "version": "v1"
+                                }
+                            ],
+                            "specDescriptors": [
+                                {
+                                    "path": "image",
+                                    "displayName": "DB Image",
+                                    "description": "DBImage (optional) overrides the default image for the db container.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "dbImage",
+                                    "displayName": "Image",
+                                    "description": "Image (optional) overrides the default image for the server container.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "coreResources",
+                                    "displayName": "Core Resources",
+                                    "description": "CoreResources (optional) overrides the default resource requirements for the server container.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:resourceRequirements"
+                                    ]
+                                },
+                                {
+                                    "path": "dbResources",
+                                    "displayName": "DB Resources",
+                                    "description": "DBResources (optional) overrides the default resource requirements for the db container.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:resourceRequirements"
+                                    ]
+                                },
+                                {
+                                    "path": "dbVolumeResources",
+                                    "displayName": "Image",
+                                    "description": "DBVolumeResources (optional) overrides the default PVC resource requirements for the database volume. For the time being this field is immutable and can only be set on system creation. This is because volume size updates are only supported for increasing the size, and only if the storage class specifies `allowVolumeExpansion: true`, +immutable.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:resourceRequirements"
+                                    ]
+                                },
+                                {
+                                    "path": "dbStorageClass",
+                                    "displayName": "DB StorageClass",
+                                    "description": "DBStorageClass (optional) overrides the default cluster StorageClass for the database volume. For the time being this field is immutable and can only be set on system creation. This affects where the system stores its database which contains system config, buckets, objects meta-data and mapping file parts to storage locations. +immutable.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "pvPoolDefaultStorageClass",
+                                    "displayName": "PV Pool DefaultStorageClass",
+                                    "description": "PVPoolDefaultStorageClass (optional) overrides the default cluster StorageClass for the pv-pool volumes. This affects where the system stores data chunks (encrypted). Updates to this field will only affect new pv-pools, but updates to existing pools are not supported by the operator.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "imagePullSecret",
+                                    "displayName": "Image Pull Secret",
+                                    "description": "ImagePullSecret (optional) sets a pull secret for the system image.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:io.kubernetes:Secret"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "backingstores.noobaa.io",
+                            "version": "v1alpha1",
+                            "kind": "BackingStore",
+                            "displayName": "Backing Store",
+                            "description": "Storage target spec such as aws-s3, s3-compatible, ibm-cos, PV's and more. Used in BucketClass to construct data placement policies.",
+                            "resources": [
+                                {
+                                    "name": "services",
+                                    "kind": "Service",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "secrets",
+                                    "kind": "Secret",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "configmaps",
+                                    "kind": "ConfigMap",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "statefulsets.apps",
+                                    "kind": "StatefulSet",
+                                    "version": "v1"
+                                }
+                            ],
+                            "specDescriptors": [
+                                {
+                                    "path": "awsS3.region",
+                                    "displayName": "Region",
+                                    "description": "Region is the AWS region.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:awsS3",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "awsS3.secret.name",
+                                    "displayName": "Secret",
+                                    "description": "Secret refers to a secret that provides the credentials. The secret should define AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:awsS3",
+                                        "urn:alm:descriptor:io.kubernetes:Secret"
+                                    ]
+                                },
+                                {
+                                    "path": "awsS3.sslDisabled",
+                                    "displayName": "SSL Disabled",
+                                    "description": "SSLDisabled allows to disable SSL and use plain http.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:awsS3",
+                                        "urn:alm:descriptor:com.tectonic.ui:booleanSwitch"
+                                    ]
+                                },
+                                {
+                                    "path": "awsS3.targetBucket",
+                                    "displayName": "Target Bucket",
+                                    "description": "TargetBucket is the name of the target S3 bucket.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:awsS3",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "azureBlob.secret.name",
+                                    "displayName": "Secret",
+                                    "description": " Secret refers to a secret that provides the credentials. The secret should define AccountName and AccountKey as provided\nby Azure Blob.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:azureBlob",
+                                        "urn:alm:descriptor:io.kubernetes:Secret"
+                                    ]
+                                },
+                                {
+                                    "path": "azureBlob.targetBlobContainer",
+                                    "displayName": "Target Blob Container",
+                                    "description": "TargetBlobContainer is the name of the target Azure Blob container.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:azureBlob",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "googleCloudStorage.secret.name",
+                                    "displayName": "Secret",
+                                    "description": "Secret refers to a secret that provides the credentials. The secret should define GoogleServiceAccountPrivateKeyJson containing\nthe entire json string as provided by Google.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:googleCloudStorage",
+                                        "urn:alm:descriptor:io.kubernetes:Secret"
+                                    ]
+                                },
+                                {
+                                    "path": "googleCloudStorage.targetBucket",
+                                    "displayName": "Target Bucket",
+                                    "description": "TargetBucket is the name of the target S3 bucket.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:googleCloudStorage",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "pvPool.numVolumes",
+                                    "displayName": "Num Volumes",
+                                    "description": "NumVolumes is the number of volumes to allocate.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:pvPool",
+                                        "urn:alm:descriptor:com.tectonic.ui:number"
+                                    ]
+                                },
+                                {
+                                    "path": "pvPool.resources",
+                                    "displayName": "Resources",
+                                    "description": "VolumeResources represents the minimum resources each volume should have.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:pvPool",
+                                        "urn:alm:descriptor:com.tectonic.ui:resourceRequirements"
+                                    ]
+                                },
+                                {
+                                    "path": "pvPool.storageClass",
+                                    "displayName": "Storage Class",
+                                    "description": "StorageClass is the name of the storage class to use for the PV's.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:pvPool",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "s3Compatible.endpoint",
+                                    "displayName": "End Point",
+                                    "description": "Endpoint is the S3 compatible endpoint: http(s)://host:port.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:s3Compatible",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "s3Compatible.secret.name",
+                                    "displayName": "Secret",
+                                    "description": "Secret refers to a secret that provides the credentials. The secret should define AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:s3Compatible",
+                                        "urn:alm:descriptor:io.kubernetes:Secret"
+                                    ]
+                                },
+                                {
+                                    "path": "s3Compatible.signatureVersion",
+                                    "displayName": "Signature Version",
+                                    "description": "SignatureVersion specifies the client signature version to use when signing requests.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:s3Compatible",
+                                        "urn:alm:descriptor:com.tectonic.ui:number"
+                                    ]
+                                },
+                                {
+                                    "path": "s3Compatible.targetBucket",
+                                    "displayName": "Target Bucket",
+                                    "description": "TargetBucket is the name of the target S3 bucket.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:s3Compatible",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "IBMCos.endpoint",
+                                    "displayName": "End Point",
+                                    "description": "Endpoint is the IBM COS endpoint: http(s)://host:port.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:ibmCos",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "IBMCos.secret.name",
+                                    "displayName": "Secret",
+                                    "description": "Secret refers to a secret that provides the credentials. The secret should define IBM_COS_ACCESS_KEY_ID and IBM_COS_SECRET_ACCESS_KEY.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:ibmCos",
+                                        "urn:alm:descriptor:io.kubernetes:Secret"
+                                    ]
+                                },
+                                {
+                                    "path": "IBMCos.signatureVersion",
+                                    "displayName": "Signature Version",
+                                    "description": "SignatureVersion specifies the client signature version to use when signing requests.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:ibmCos",
+                                        "urn:alm:descriptor:com.tectonic.ui:number"
+                                    ]
+                                },
+                                {
+                                    "path": "IBMCos.targetBucket",
+                                    "displayName": "Target Bucket",
+                                    "description": "TargetBucket is the name of the target IBM COS bucket.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:ibmCos",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "namespacestores.noobaa.io",
+                            "version": "v1alpha1",
+                            "kind": "NamespaceStore",
+                            "displayName": "Namespace Store",
+                            "description": "Storage target spec such as aws-s3, s3-compatible, ibm-cos and more. Used in BucketClass to construct namespace policies.",
+                            "resources": [
+                                {
+                                    "name": "services",
+                                    "kind": "Service",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "secrets",
+                                    "kind": "Secret",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "configmaps",
+                                    "kind": "ConfigMap",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "statefulsets.apps",
+                                    "kind": "StatefulSet",
+                                    "version": "v1"
+                                }
+                            ],
+                            "specDescriptors": [
+                                {
+                                    "path": "awsS3.region",
+                                    "displayName": "Region",
+                                    "description": "Region is the AWS region.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:awsS3",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "awsS3.secret.name",
+                                    "displayName": "Secret",
+                                    "description": "Secret refers to a secret that provides the credentials. The secret should define AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:awsS3",
+                                        "urn:alm:descriptor:io.kubernetes:Secret"
+                                    ]
+                                },
+                                {
+                                    "path": "awsS3.sslDisabled",
+                                    "displayName": "SSL Disabled",
+                                    "description": "SSLDisabled allows to disable SSL and use plain http.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:awsS3",
+                                        "urn:alm:descriptor:com.tectonic.ui:booleanSwitch"
+                                    ]
+                                },
+                                {
+                                    "path": "awsS3.targetBucket",
+                                    "displayName": "Target Bucket",
+                                    "description": "TargetBucket is the name of the target S3 bucket.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:awsS3",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "azureBlob.secret.name",
+                                    "displayName": "Secret",
+                                    "description": " Secret refers to a secret that provides the credentials. The secret should define AccountName and AccountKey as provided\nby Azure Blob.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:azureBlob",
+                                        "urn:alm:descriptor:io.kubernetes:Secret"
+                                    ]
+                                },
+                                {
+                                    "path": "azureBlob.targetBlobContainer",
+                                    "displayName": "Target Blob Container",
+                                    "description": "TargetBlobContainer is the name of the target Azure Blob container.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:azureBlob",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "s3Compatible.endpoint",
+                                    "displayName": "End Point",
+                                    "description": "Endpoint is the S3 compatible endpoint: http(s)://host:port.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:s3Compatible",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "s3Compatible.secret.name",
+                                    "displayName": "Secret",
+                                    "description": "Secret refers to a secret that provides the credentials. The secret should define AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:s3Compatible",
+                                        "urn:alm:descriptor:io.kubernetes:Secret"
+                                    ]
+                                },
+                                {
+                                    "path": "s3Compatible.signatureVersion",
+                                    "displayName": "Signature Version",
+                                    "description": "SignatureVersion specifies the client signature version to use when signing requests.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:s3Compatible",
+                                        "urn:alm:descriptor:com.tectonic.ui:number"
+                                    ]
+                                },
+                                {
+                                    "path": "s3Compatible.targetBucket",
+                                    "displayName": "Target Bucket",
+                                    "description": "TargetBucket is the name of the target S3 bucket.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:s3Compatible",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "IBMCos.endpoint",
+                                    "displayName": "End Point",
+                                    "description": "Endpoint is the IBM COS endpoint: http(s)://host:port.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:ibmCos",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "IBMCos.secret.name",
+                                    "displayName": "Secret",
+                                    "description": "Secret refers to a secret that provides the credentials. The secret should define IBM_COS_ACCESS_KEY_ID and IBM_COS_SECRET_ACCESS_KEY.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:ibmCos",
+                                        "urn:alm:descriptor:io.kubernetes:Secret"
+                                    ]
+                                },
+                                {
+                                    "path": "IBMCos.signatureVersion",
+                                    "displayName": "Signature Version",
+                                    "description": "SignatureVersion specifies the client signature version to use when signing requests.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:ibmCos",
+                                        "urn:alm:descriptor:com.tectonic.ui:number"
+                                    ]
+                                },
+                                {
+                                    "path": "IBMCos.targetBucket",
+                                    "displayName": "Target Bucket",
+                                    "description": "TargetBucket is the name of the target IBM COS bucket.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:ibmCos",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "bucketclasses.noobaa.io",
+                            "version": "v1alpha1",
+                            "kind": "BucketClass",
+                            "displayName": "Bucket Class",
+                            "description": "Storage policy spec  tiering, mirroring, spreading, namespace policy. Combines BackingStores Or NamespaceStores. Referenced by ObjectBucketClaims.",
+                            "resources": [
+                                {
+                                    "name": "services",
+                                    "kind": "Service",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "secrets",
+                                    "kind": "Secret",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "configmaps",
+                                    "kind": "ConfigMap",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "statefulsets.apps",
+                                    "kind": "StatefulSet",
+                                    "version": "v1"
+                                }
+                            ],
+                            "specDescriptors": [
+                                {
+                                    "path": "placementPolicy.tiers[0].backingStores[0]",
+                                    "displayName": "Backing Stores",
+                                    "description": "BackingStores is an unordered list of backing store names. The meaning of the list depends on the placement.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:placementPolicy",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "placementPolicy.tiers[0].placement",
+                                    "displayName": "Placement",
+                                    "description": "Placement specifies the type of placement for the tier If empty it should have a single backing store.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:placementPolicy",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "namespacePolicy.type",
+                                    "displayName": "Namespace Policy",
+                                    "description": "Namespace Policy type specifies the type of the namespace policy configuration.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:namespacePolicy",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "namespacePolicy.single.resource",
+                                    "displayName": "Resource",
+                                    "description": "Resource specifies the namespace store configured by the bucket class to be read and write targets.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:namespacePolicy",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "namespacePolicy.Multi.readResources",
+                                    "displayName": "Read Resources",
+                                    "description": "Read Resources specifies the namespace stores configured by the bucket class to be read targets.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:namespacePolicy",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "namespacePolicy.Multi.writeResource",
+                                    "displayName": "Write Resource",
+                                    "description": "Write Resource specifies the namespace store configured by the bucket class to be write target.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:namespacePolicy",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                },
+                                {
+                                    "path": "namespacePolicy.Cache.hubResource",
+                                    "displayName": "Hub Resource",
+                                    "description": "Hub Resource specifies the target namespace store configured by the bucket class to be read and write targets.",
+                                    "x-descriptors": [
+                                        "urn:alm:descriptor:com.tectonic.ui:fieldGroup:namespacePolicy",
+                                        "urn:alm:descriptor:com.tectonic.ui:text"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "name": "noobaaaccounts.noobaa.io",
+                            "version": "v1alpha1",
+                            "kind": "NooBaaAccount",
+                            "resources": [
+                                {
+                                    "name": "services",
+                                    "kind": "Service",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "secrets",
+                                    "kind": "Secret",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "configmaps",
+                                    "kind": "ConfigMap",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "statefulsets.apps",
+                                    "kind": "StatefulSet",
+                                    "version": "v1"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "objectbucketclaims.objectbucket.io",
+                            "version": "v1alpha1",
+                            "kind": "ObjectBucketClaim",
+                            "displayName": "Object Bucket Claim",
+                            "description": "Claim a bucket just like claiming a PV. Automate you app bucket provisioning by creating OBC with your app deployment. A secret and configmap (name=claim) will be created with access details for the app pods.",
+                            "resources": [
+                                {
+                                    "name": "services",
+                                    "kind": "Service",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "secrets",
+                                    "kind": "Secret",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "configmaps",
+                                    "kind": "ConfigMap",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "statefulsets.apps",
+                                    "kind": "StatefulSet",
+                                    "version": "v1"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "objectbuckets.objectbucket.io",
+                            "version": "v1alpha1",
+                            "kind": "ObjectBucket",
+                            "displayName": "Object Bucket",
+                            "description": "Used under-the-hood. Created per ObjectBucketClaim and keeps provisioning information.",
+                            "resources": [
+                                {
+                                    "name": "services",
+                                    "kind": "Service",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "secrets",
+                                    "kind": "Secret",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "configmaps",
+                                    "kind": "ConfigMap",
+                                    "version": "v1"
+                                },
+                                {
+                                    "name": "statefulsets.apps",
+                                    "kind": "StatefulSet",
+                                    "version": "v1"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "backups.postgresql.cnpg.noobaa.io",
+                            "version": "v1",
+                            "kind": "Backup",
+                            "displayName": "Backup",
+                            "description": "This CRD is intended for internal use by Noobaa Operator."
+                        },
+                        {
+                            "name": "clusterimagecatalogs.postgresql.cnpg.noobaa.io",
+                            "version": "v1",
+                            "kind": "ClusterImageCatalog",
+                            "displayName": "ClusterImageCatalog",
+                            "description": "This CRD is intended for internal use by Noobaa Operator."
+                        },
+                        {
+                            "name": "clusters.postgresql.cnpg.noobaa.io",
+                            "version": "v1",
+                            "kind": "Cluster",
+                            "displayName": "Cluster",
+                            "description": "This CRD is intended for internal use by Noobaa Operator."
+                        },
+                        {
+                            "name": "databases.postgresql.cnpg.noobaa.io",
+                            "version": "v1",
+                            "kind": "Database",
+                            "displayName": "Database",
+                            "description": "This CRD is intended for internal use by Noobaa Operator."
+                        },
+                        {
+                            "name": "failoverquorums.postgresql.cnpg.noobaa.io",
+                            "version": "v1",
+                            "kind": "FailoverQuorum",
+                            "displayName": "FailoverQuorum",
+                            "description": "This CRD is intended for internal use by Noobaa Operator."
+                        },
+                        {
+                            "name": "imagecatalogs.postgresql.cnpg.noobaa.io",
+                            "version": "v1",
+                            "kind": "ImageCatalog",
+                            "displayName": "ImageCatalog",
+                            "description": "This CRD is intended for internal use by Noobaa Operator."
+                        },
+                        {
+                            "name": "poolers.postgresql.cnpg.noobaa.io",
+                            "version": "v1",
+                            "kind": "Pooler",
+                            "displayName": "Pooler",
+                            "description": "This CRD is intended for internal use by Noobaa Operator."
+                        },
+                        {
+                            "name": "publications.postgresql.cnpg.noobaa.io",
+                            "version": "v1",
+                            "kind": "Publication",
+                            "displayName": "Publication",
+                            "description": "This CRD is intended for internal use by Noobaa Operator."
+                        },
+                        {
+                            "name": "scheduledbackups.postgresql.cnpg.noobaa.io",
+                            "version": "v1",
+                            "kind": "ScheduledBackup",
+                            "displayName": "ScheduledBackup",
+                            "description": "This CRD is intended for internal use by Noobaa Operator."
+                        },
+                        {
+                            "name": "subscriptions.postgresql.cnpg.noobaa.io",
+                            "version": "v1",
+                            "kind": "Subscription",
+                            "displayName": "Subscription",
+                            "description": "This CRD is intended for internal use by Noobaa Operator."
+                        }
+                    ]
+                },
+                "description": "The noobaa operator creates and reconciles a NooBaa system in a Kubernetes/Openshift cluster.\n\nNooBaa provides an S3 object-store service abstraction and data placement policies to create hybrid and multi cloud data solutions.\n\nFor more information on using NooBaa refer to [Github](https://github.com/noobaa/noobaa-core) / [Website](https://www.noobaa.io) / [Articles](https://noobaa.desk.com). \n\n## How does it work?\n\n- The operator deploys the noobaa core pod and two services - Mgmt (UI/API) and S3 (object-store).\n- Both services require credentials which you will get from a secret that the operator creates - use describe noobaa to locate it.\n- The service addresses will also appear in the describe output - pick the one that is suitable for your client:\n    - minikube - use the NodePort address.\n    - remote cluster - probably need one of the External addresses.\n    - connect an application on the same cluster - use Internal DNS (though any address should work)\n    \n- Feel free to email us or open github issues on any question.\n\n## Getting Started\n\n### Notes:\n- The following instructions are for **minikube** but it works on any Kubernetes/Openshift clusters.\n- This will setup noobaa in the **my-noobaa-operator** namespace.\n- You will need **jq**, **curl**, **kubectl** or **oc**, **aws-cli**.\n\n### 1. Install OLM (if you don't have it already):\n```\ncurl -sL https://github.com/operator-framework/operator-lifecycle-manager/releases/download/0.12.0/install.sh | bash -s 0.12.0\n```\n\n### 2. Install noobaa-operator:\n```\nkubectl create -f https://operatorhub.io/install/noobaa-operator.yaml\n```\nWait for it to be ready:\n```\nkubectl wait pod -n my-noobaa-operator -l noobaa-operator --for=condition=ready\n```\n\n### 3. Create noobaa system:\n```\ncurl -sL https://operatorhub.io/api/operator?packageName=noobaa-operator | \n    jq '.operator.customResourceDefinitions[0].yamlExample | .metadata.namespace=\"my-noobaa-operator\"' |\n    kubectl create -f -\n```\nWait for it to be ready:\n```\nkubectl wait pod -n my-noobaa-operator -l noobaa-core --for=condition=ready\nkubectl get noobaa -n my-noobaa-operator -w\n# NAME     PHASE   MGMT-ENDPOINTS                  S3-ENDPOINTS                    IMAGE                    AGE\n# noobaa   **Ready**   [https://192.168.64.12:31121]   [https://192.168.64.12:32557]   noobaa/noobaa-core:4.0   19m\n```\n\n### 4. Get system information to your shell:\n```\nNOOBAA_SECRET=$(kubectl get noobaa noobaa -n my-noobaa-operator -o json | jq -r '.status.accounts.admin.secretRef.name' )\nNOOBAA_MGMT=$(kubectl get noobaa noobaa -n my-noobaa-operator -o json | jq -r '.status.services.serviceMgmt.nodePorts[0]' )\nNOOBAA_S3=$(kubectl get noobaa noobaa -n my-noobaa-operator -o json | jq -r '.status.services.serviceS3.nodePorts[0]' )\nNOOBAA_ACCESS_KEY=$(kubectl get secret $NOOBAA_SECRET -n my-noobaa-operator -o json | jq -r '.data.AWS_ACCESS_KEY_ID|@base64d')\nNOOBAA_SECRET_KEY=$(kubectl get secret $NOOBAA_SECRET -n my-noobaa-operator -o json | jq -r '.data.AWS_SECRET_ACCESS_KEY|@base64d')\n```\n\n### 5. Connect to Mgmt UI:\n```\n# show email/password from the secret:\nkubectl get secret $NOOBAA_SECRET -n my-noobaa-operator -o json | jq '.data|map_values(@base64d)'\n\n# open mgmt UI login:\nopen $NOOBAA_MGMT\n```\n\n### 6. Connect to S3 with aws-cli:\n```\nalias s3='AWS_ACCESS_KEY_ID=$NOOBAA_ACCESS_KEY AWS_SECRET_ACCESS_KEY=$NOOBAA_SECRET_KEY aws --endpoint $NOOBAA_S3 --no-verify-ssl s3'\ns3 ls\ns3 sync /var/log/ s3://first.bucket\ns3 ls s3://first.bucket\n```\n",
+                "displayName": "NooBaa Operator",
+                "installModes": [
+                    {
+                        "type": "OwnNamespace",
+                        "supported": true
+                    },
+                    {
+                        "type": "SingleNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "MultiNamespace",
+                        "supported": false
+                    },
+                    {
+                        "type": "AllNamespaces",
+                        "supported": true
+                    }
+                ],
+                "keywords": [
+                    "noobaa",
+                    "kubernetes",
+                    "openshift",
+                    "cloud",
+                    "hybrid",
+                    "multi",
+                    "data",
+                    "storage",
+                    "s3",
+                    "tiering",
+                    "mirroring"
+                ],
+                "links": [
+                    {
+                        "name": "Github",
+                        "url": "https://github.com/noobaa/noobaa-core"
+                    },
+                    {
+                        "name": "Website",
+                        "url": "https://www.noobaa.io"
+                    },
+                    {
+                        "name": "Articles",
+                        "url": "https://noobaa.desk.com"
+                    }
+                ],
+                "maintainers": [
+                    {
+                        "name": "Guy Margalit",
+                        "email": "gmargali@redhat.com"
+                    },
+                    {
+                        "name": "Eran Tamir",
+                        "email": "etamir@redhat.com"
+                    },
+                    {
+                        "name": "Nimrod Becker",
+                        "email": "nbecker@redhat.com"
+                    }
+                ],
+                "maturity": "alpha",
+                "minKubeVersion": "1.22.0",
+                "provider": {
+                    "name": "NooBaa"
+                }
+            }
+        }
+    ],
+    "relatedImages": [
+        {
+            "name": "noobaa-core",
+            "image": "registry.redhat.io/odf4/mcg-core-rhel9@sha256:8f008f1fdde81adb1e7f0bc9d12b6ca57d76123505b73e90690f9acc76422107"
+        },
+        {
+            "name": "",
+            "image": "registry.redhat.io/odf4/mcg-operator-bundle@sha256:f6ecd6840262e4a932d23337f47f94afaa5fe7d413985ad28a1fb99e52d2a883"
+        },
+        {
+            "name": "noobaa-operator",
+            "image": "registry.redhat.io/odf4/mcg-rhel9-operator@sha256:56b832f8b5218b45f51d599c80575d3466e373a3745284eb5f77bebe377ef446"
+        },
+        {
+            "name": "cnpg-operator",
+            "image": "registry.redhat.io/odf4/odf-cloudnative-pg-rhel9-operator@sha256:8b4c54df7f6b1680400b07b3cc0dcc6af8355c92e7e6cc7710fbb3ac6aa16907"
+        },
+        {
+            "name": "odf-cosi-sidecar",
+            "image": "registry.redhat.io/odf4/odf-cosi-sidecar-rhel9@sha256:e80764ed3a248b97cf1a33822842c078a999f5a5417a04422207e3c5aefef9d6"
+        },
+        {
+            "name": "noobaa-db",
+            "image": "registry.redhat.io/rhel9/postgresql-16@sha256:791a6f14563178d1bbcd3515bc7dc80c1ae0788a829ff26551cdedbf8f50f0d2"
+        }
+    ]
+}
